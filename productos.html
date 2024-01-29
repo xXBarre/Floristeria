@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Windows</title>
+    <style>
+        .window {
+            width: 390px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="window" onclick="window.open('flores.html', '_blank')">
+        <iframe src="flores.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="window" onclick="window.open('https://www.example2.com', '_blank')">
+        <iframe src="https://www.example2.com" width="100%" height="100%"></iframe>
+    </div>
+    <div class="window" onclick="window.open('https://www.example3.com', '_blank')">
+        <iframe src="https://www.example3.com" width="100%" height="100%"></iframe>
+    </div>
+</body>
+</html>
+
+
