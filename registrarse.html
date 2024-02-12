@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body id="background">
+<br><br>
+  <center>
+    <title>Fecha actual</title>
+    <h1 id="fecha-actual"></h1>
+    <script>
+      var fechaActual = new Date();
+      var dia = fechaActual.getDate();
+      var mes = fechaActual.getMonth() + 1;
+      var año = fechaActual.getFullYear();
+      
+      var textoFechaActual = 'FECHA: ' + dia + '/' + mes + '/' + año;
+      var fechaActualElemento = document.getElementById('fecha-actual');
+
+      fechaActualElemento.innerHTML = textoFechaActual;
+    </script>
+  </center>
+  <br>
+  <br>
+  <br>
+  <h2>REGISTRARSE</h2>
+  <form id="registrarseForm">
+    <label for="name">NOMBRE:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="email">EMAIL:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="password">CONTRASEÑA:</label>
+    <input type="password" id="password" required>
+    <br>
+    <label for="confirmPassword">CONFIRMAR CONTRASEÑA:</label>
+    <input type="password" id="confirmPassword" required>
+    <br>
+    <button onclick="abrir()">REGISTRARSE</button> 
+    <script>
+      document.getElementById("registrarseForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Verificar si la contraseña coincide con la confirmación de contraseña
+        if (password !== confirmPassword) {
+          alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
+          return;
+        }
+
+        // Verificar si la contraseña contiene símbolos, números y letras
+        var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
+        if (!passwordPattern.test(password)) {
+          alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+          return;
+        }
+
+        // volver a otra página
+        window.location.href = "paginainicioprincipal.html";
+      });
+    </script>
+    <br>
+    <br>
+  </form>
+</body>
+</html>
