@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicio.css">
-    <title>Floristería Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Inicio Bloom</title>
 </head>
 <body>
-    <header>
-        <h1>Floristería Bloom</h1>
-    </header>
+    <header class="header">
+        <nav class="nav">
+          <a href="inicio.html" class="logo nav-link">Flor Bloom</a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Registrate</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
     <section class="carousel-container">
         <h2>Nuestros Productos</h2>
         <div class="carousel">
             <div class="slide">
-                <img src="maceta.jpg" alt="Flores hermosas">
+                <img src="/fotos/maceta.jpg" alt="Flores hermosas">
             </div>
             <div class="slide">
-                <img src="ramos.png" alt="Ramos de flores">
+                <img src="/fotos/ramos.png" alt="Ramos de flores">
             </div>
             <div class="slide">
-                <img src="regadera.webp" alt="Arreglos florales">
+                <img src="/fotos/regadera.webp" alt="Arreglos florales">
             </div>
             <!-- Clona el primer y último slide -->
             <div class="slide">
-                <img src="ramo.jpg" alt="Flores hermosas">
+                <img src="/fotos/ramo.jpg" alt="Flores hermosas">
             </div>
             <div class="slide">
-                <img src="palas.jpeg" alt="Ramos de flores">
+                <img src="/fotos/palas.jpeg" alt="Ramos de flores">
             </div>
             <div class="slide">
-                <img src="planta.jpg" alt="Ramos de flores">
+                <img src="/fotos/planta.jpg" alt="Ramos de flores">
             </div>
         </div>
     </section>
@@ -71,8 +91,6 @@
     <footer>
         <p>&copy; 2024 Floristería Bloom</p>
     </footer>
-
-    <script src="inicio.js"></script>
 </body>
 </html>
 
