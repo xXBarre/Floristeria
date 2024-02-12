@@ -21,10 +21,23 @@ h1 {
     margin: 0;
 }
 
+/*Laura*/
+
+.window {
+    width: 390px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .stores-section, .about-us-section {
     text-align: center;
     padding: 2em 0;
 }
+
+/*Alba*/
 
 /* Estilos actualizados para las tiendas */
 .stores-section {
@@ -84,7 +97,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
-  
+
+/*Nico*/
+
   .nav {
     display: flex;
     justify-content: space-between;
