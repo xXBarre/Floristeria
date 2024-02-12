@@ -85,14 +85,7 @@ footer {
     width: 100%;
 }
 
-  .header {
-    background-color: #1ea215;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
+
   
   .nav {
     display: flex;
