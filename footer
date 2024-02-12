@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Pagina inicio superior </title>
+</head>
+<body id="inicio">
+        <br>
+        
+    <div class="footer">
+    <table class="tablainferior" cellspacing="70">
+    <td>
+    <h3>CONTACTO</h3>
+    <br>
+    <li>Direccion: Av. de Fernando Alonso, 8, 28108, Alcobendas, Madrid.</li>
+    <li>Telefono: 612 345 678 - 912 987 654 </li>
+    <li ><a href="mailito:2017hugoherrero@gmail.com">Correo electronico:</a></li>
+    <li><a href="https://goo.gl/maps/JnowR6KXCaFm3KhL7" target="_blank">Direccion Google Maps</a></li>
+    </td>
+    <td>
+    <h3>REDES SOCIALES</h3>
+    <br>
+    <br>
+    <a href="https://www.instagram.com/" target="_blank"><img src="Fotos/Instagram.jpg" width="50" height="50"></a>
+    <a href="https://www.facebook.com/" target="_blank"><img src="Fotos/facebook.png" width="50" height="50"></a>
+    <a href="https://www.youtube.com/" target="_blank"><img src="Fotos/youtube.avif" alt="YouTube"></a>
+    <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZXMifQ%3D%3D%22%7D" target="_blank"><img src="Fotos/twitter.png" width="50" height="50"></a>
+    </td>
+    </table>
+    <br>
+    <br>
+                <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3 vc_col-xs-12 color-scheme-light">
+                <div class="vc_column-inner vc_custom_1476463312411">
+                    <div class="wpb_wrapper">
+                <div class="wpb_text_column wpb_content_element vc_custom_1609261370952">
+                    <div class="wpb_wrapper">
+                        <h3><i class="fab fa-whatsapp" ></i><a id="wasap" class="ventajas" href="https://api.whatsapp.com/send?phone=34637600263&amp;text=Hola%20quisiera%20obtener%20más%20información" target="_blank">¿QUIERES SABER MÁS DE NOSOTROS? <a id="btn-fixed" href="#"><img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/soon-873316_960_720.png" alt="Whatsapp" width="50" height="50"/></a></a></h3>
+    </div>
+    <br>
+    </div>
+    <br>
+    <button id="boton"><a href="formulario solicitud.html"> SOLICITUD DE INFORMACION </a> </button>
+</body>
+</html>
