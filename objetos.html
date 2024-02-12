@@ -1,85 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floristería Bella Flor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floristería Bloom - Objetos</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
+h1 {
+  text-align: center;
+  color: #0a6d39;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: none;
+  text-align: center;
+}
+.slide img {
+            max-width: 25%;
+            height: auto;
+        }
+.active {
+  display: block;
+}
+</style>
 </head>
 <body>
-
-    <h1>OBJETOS</h1>
-
-    <div id="objectCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="object">
-                    <img src="fotos/o1.png" alt="Rosa Roja">
+<h1>Objetos</h1>
+<div class="carousel">
+  <div class="carousel-container">
+    <div class="slide active">
+        <img src="fotos/o1.png">
                     <h2>Maceta naranja simple <br></h2>
                         <h4>4,99€</h4>
-                    <p>Diseñado con material reciclado, perfecta para principiantes y gente clásica.</p>
+                    <p>Diseñado con material reciclado, perfecta para principiantes y gente clásica.</p> 
                 </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="object">
-                    <img src="fotos/o2.jpg" alt="Lirio Blanco">
+    <div class="slide">
+        <img src="fotos/o2.jpg">
                     <h2>Maceta Playmobil<br></h2>
                     <h4>22,99€</h4>
-                    <p>Una auténtica obra de arte, colaboración con Playmobil perfecta para los mayores frikis.</p>
+                    <p>Una auténtica obra de arte, colaboración con Playmobil perfecta para los mayores frikis.</p> 
                 </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="object">
-                    <img src="fotos/o3.jpg" alt="Tulipán Amarillo">
+    <div class="slide">
+        <img src="fotos/o3.jpg">
                     <h2>Rosal Mini Rosa<br></h2>
                     <h4>22,99€</h4>
                     <p>Esta variación de flores es hermosa y tiene un significado particular, las mini rosas simbolizan la dulzura, la delicadeza, alegría, tranquilidad y bondad.</p>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="object">
-                    <img src="fotos/o4.png" alt="Tulipán Amarillo">
+    <div class="slide">
+        <img src="fotos/o4.png">
                     <h2>Maceta azul<br></h2>
                     <h4>10,99€</h4>
                     <p>Maceta de cerámica perfecta para darle un aspecto más elegante a tu planta de interior.</p>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="object">
-                    <img src="fotos/o5.png" alt="Tulipán Amarillo">
+    <div class="slide">
+        <img src="fotos/o5.png">
                     <h2>Maceta blanca<br></h2>
                     <h4>8,20€</h4>
-                    <p>Maceta sencilla y elegante, tanto para interior como para exterior.</p>
+                    <p>Maceta sencilla y elegante, tanto para interior como para exterior.</p>             
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="object">
-                    <img src="fotos/o6.png" alt="Tulipán Amarillo">
+    <div class="slide">
+        <img src="fotos/o6.png">
                     <h2>Maceta de bosque<br></h2>
                     <h4>29,00€</h4>
                     <p>Una auténtica obra de arte, elegante, detallada y pintada a mano, perfecta para dar un toque diferente y original a tus plantas.</p>
+                 </div>
+    <div class="slide">
+        <img src="fotos/o7.png">
+                    <h2>Pala<br></h2>
+                    <h4>10,20€</h4>
+                    <p>Perfecta pala de acero inoxidable para facilitarte el cultivo de tus plantas.</p>             
                 </div>
-            </div>
+    <div class="slide">
+        <img src="fotos/o8.png">
+                    <h2>Regadera de erizo<br></h2>
+                    <h4>9,55€</h4>
+                    <p>Preciosa regadera para ser la envidia de tus vecinos.</p>             
+                </div>
+    <div class="slide">
+        <img src="fotos/o9.png">
+                    <h2>Abono universal<br></h2>
+                    <h4>28,20€</h4>
+                    <p>Abono para plantas y flores de interior y exterior, ecológico y sostenible.</p>             
+                </div>
+    <div class="slide">
+        <img src="fotos/o10.png">
+                    <h2>Tierra universal<br></h2>
+                    <h4>18,50€</h4>
+                    <p>Asegurate de que tus plantas y flores crecen entre tierra de alta calidad.</p>             
+                </div>
+  </div>
+</div>
 
-        </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll('.slide');
 
-        <a class="carousel-control-prev" href="#objectCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#objectCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-    </div>
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', function() {
+      const currentSlide = document.querySelector('.active');
+      const nextIndex = (index + 1) % slides.length;
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+      currentSlide.classList.remove('active');
+      slides[nextIndex].classList.add('active');
+    });
+  });
+});
+</script>
 
 </body>
 </html>
