@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floristería Bella Flor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 10px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        .flower {
-            border: 1px solid #ddd;
-            padding: 3px;
-            margin: 3px;
-            text-align: center;
-        }
-        .flower img {
-            max-width: 25%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <header class="header">
+        <nav class="nav">
+          <a href="inicio.html" class="logo nav-link">Flor Bloom</a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Registrate</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <main>
     <h1>PLANTAS</h1>
-
     <div id="flowerCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
 
@@ -74,22 +76,22 @@
                     <p>Este combo es perfecto tanto para decorar una habitación entera como para compartir con tus familiares y amigos.</p>
                 </div>
             </div>
-            
         </div>
 
-        <a class="carousel-control-prev" href="#flowerCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#flowerCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-    </div>
+            <a class="carousel-control-prev" href="#flowerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#flowerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    </main>
 
 </body>
 </html>

@@ -37,6 +37,19 @@ h1 {
     padding: 2em 0;
 }
 
+.flower {
+    border: 1px solid #ddd;
+    padding: 3px;
+    margin: 3px;
+    text-align: center;
+}
+.flower img {
+    max-width: 25%;
+    height: auto;
+}
+
+
+
 /*Alba*/
 
 /* Estilos actualizados para las tiendas */
