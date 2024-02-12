@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Windows</title>
-    <style>
-        .window {
-            width: 390px;
-            height: 500px;
-            border: 1px solid black;
-            margin: 10px;
-            display: inline-block;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Productos Bloom</title>
 </head>
+<header class="header">
+    <nav class="nav">
+      <a href="inicio.html" class="logo nav-link">Flor Bloom</a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Registrate</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 <body>
     <div class="window" onclick="window.open('flores.html', '_blank')">
-        <iframe src="flores.html" width="100%" height="100%"></iframe>
+        <iframe src="/fotos/flores.html" width="100%" height="100%"></iframe>
     </div>
     <div class="window" onclick="window.open('https://www.example2.com', '_blank')">
         <iframe src="https://www.example2.com" width="100%" height="100%"></iframe>
