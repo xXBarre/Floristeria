@@ -1,14 +1,15 @@
 * {
     margin: 0;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     background-color: #75a478;
     color: #fff;
@@ -20,8 +21,7 @@ h1 {
     margin: 0;
 }
 
-.stores-section,
-.about-us-section {
+.stores-section, .about-us-section {
     text-align: center;
     padding: 2em 0;
 }
@@ -84,8 +84,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-
   
   .nav {
     display: flex;
@@ -128,7 +126,7 @@ footer {
   
   .nav-menu-link:hover,
   .nav-menu-link_active {
-    background-color: #03740e;
+    background-color: #466248;
     transition: 0.5s;
   }
   
