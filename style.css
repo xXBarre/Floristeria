@@ -75,27 +75,27 @@ h1{
   cursor: pointer;
 }
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px auto;
-}
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+  }
 
-.section {
-  text-align: center;
-}
+  .section {
+    text-align: center;
+  }
 
-.section img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
+  .section img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.section img:hover {
-  transform: scale(1.1);
-}
+  .section img:hover {
+    transform: scale(1.1);
+  }
 
 .objetos-page h1 {
   text-align: center;
