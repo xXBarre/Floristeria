@@ -4,41 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Floristería Bloom - Flores</title>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-h1 {
-  text-align: center;
-  color: #0a6d39;
-}
-
-.carousel-container {
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-}
-
-.slide {
-  flex: 0 0 100%;
-  display: none;
-  text-align: center;
-}
-.slide img {
-            max-width: 25%;
-            height: auto;
-        }
-.active {
-  display: block;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="index.js"></script>
 </head>
 <body>
-<h1>FLORES</h1>
+  <header class="header">
+    <nav class="nav">
+      <a href="inicio.html" class="logo nav-link">Flores Bloom</a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="registrarse.html" class="nav-menu-link nav-link">Login</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<h1 id="titflor">FLORES</h1>
 <div class="carousel">
   <div class="carousel-container">
     <div class="slide active">
@@ -85,23 +77,6 @@ h1 {
     </div>
   </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll('.slide');
-
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', function() {
-      const currentSlide = document.querySelector('.active');
-      const nextIndex = (index + 1) % slides.length;
-
-      currentSlide.classList.remove('active');
-      slides[nextIndex].classList.add('active');
-    });
-  });
-});
-</script>
-
 </body>
 </html>
 

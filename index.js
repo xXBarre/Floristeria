@@ -1,15 +1,3 @@
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("nav-menu_visible");
-
-  if (navMenu.classList.contains("nav-menu_visible")) {
-    navToggle.setAttribute("aria-label", "Cerrar menú");
-  } else {
-    navToggle.setAttribute("aria-label", "Abrir menú");
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
@@ -26,4 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setInterval(nextSlide, 3000); // Cambiar de slide cada 3 segundos (ajustar según sea necesario)
+});
+
+/*Laura*/
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll('.slide');
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', function() {
+      const currentSlide = document.querySelector('.active');
+      const nextIndex = (index + 1) % slides.length;
+
+      currentSlide.classList.remove('active');
+      slides[nextIndex].classList.add('active');
+    });
+  });
 });
