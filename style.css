@@ -74,45 +74,6 @@ h1{
     display: inline-block;
     cursor: pointer;
   }
-  
-  .stores-section, .about-us-section {
-    text-align: center;
-    padding: 2em 0;
-  }
-
-  .carousel-container {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-  }
-  
-  .slide {
-    flex: 0 0 100%;
-    display: none;
-    text-align: center;
-  }
-  .slide img {
-              max-width: 25%;
-              height: auto;
-          }
-  .active {
-    display: block;
-  }
-
-  .titflor h1 {
-    text-align: center;
-    color: #0a6d39;
-  }
-  
-  .carousel-container {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-  }
 
   .container {
     display: flex;
@@ -134,8 +95,9 @@ h1{
   
   .section img:hover {
     transform: scale(1.1);
-  }
-#objetos-page h1 {
+}
+
+  #objetos-page h1 {
     text-align: center;
     color: #0a6d39;
   }

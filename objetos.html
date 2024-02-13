@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Floristería Bloom - Objetos</title>
 <link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
 </head>
 <body>
 <div id="objetos-page">
@@ -12,42 +13,42 @@
   <div class="carousel">
     <div class="carousel-container">
       <div class="slide active">
-          <img src="f1.png" alt="Rosa Roja">
+          <img src="fotos/f1.png" alt="Rosa Roja">
           <h2>Orquídea Bicolor con Maceta <br></h2>
               <h4>35,99€</h4>
           <p>Las orquídeas simbolizan amor y prosperidad porque crecen fácilmente y florecen bajo diversas condiciones, características que cuando se analizan metafóricamente son muy valiosas para cualquier persona. Además, representan belleza y perfección, elementos que no deben faltar en tu hogar o al hacer un regalo.</p>
       
       </div>
       <div class="slide">
-          <img src="f2.png" alt="Lirio Blanco">
+          <img src="fotos/f2.png" alt="Lirio Blanco">
           <h2>Ramo de 40 tulipanes de colores<br></h2>
           <h4>52,99€</h4>
           <p>Un ramo de tulipanes puede plasmar una amplia variedad de emociones, como la admiración y la pasión, pero también el duelo. Los tulipanes rojos simbolizan el amor verdadero y los amarillos, la alegría.</p>
      
       </div>
       <div class="slide">
-          <img src="f3.png" alt="Tulipán Amarillo">
+          <img src="foto/f3.png" alt="Tulipán Amarillo">
           <h2>Rosal Mini Rosa<br></h2>
           <h4>22,99€</h4>
           <p>Esta variación de flores es hermosa y tiene un significado particular, las mini rosas simbolizan la dulzura, la delicadeza, alegría, tranquilidad y bondad.</p>
       
       </div>
       <div class="slide">
-          <img src="f4.png" alt="Tulipán Amarillo">
+          <img src="foto/f4.png" alt="Tulipán Amarillo">
           <h2>Jardín Eterno La Platgeta<br></h2>
           <h4>69,99€</h4>
           <p>Con el Jardín Eterno La Platgeta tendrás un pedazo del trópico en un pequeño terrario. Sus fitonias de colores y su aspa recrean un ecosistema que se autoabastece. Un pequeño oasis tropical en tu casa.</p>
       
       </div>
       <div class="slide">
-          <img src="f5.png" alt="Tulipán Amarillo">
+          <img src="foto/f5.png" alt="Tulipán Amarillo">
               <h2>Natalie - Lirios Blancos y Rosados<br></h2>
               <h4>32,00€</h4>
               <p>Este ramo de lirios blancos y rosados viene directamente desde los campos de nuestro agricultor en Vilassar de Mar (Barcelona).</p>
                   
       </div>
       <div class="slide">
-          <img src="f6.png" alt="Tulipán Amarillo">
+          <img src="foto/f6.png" alt="Tulipán Amarillo">
               <h2>Anthurium Lila con Maceta<br></h2>
               <h4>29,00€</h4>
               <p>Aquí está el clásico que más está triunfando este año. Su color violeta, la forma de corazón de sus brácteas… lo de este Anturio es una pasada.</p>
@@ -55,21 +56,5 @@
       </div>
     </div>
   </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll('#objetos-page .slide');
-
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', function() {
-      const currentSlide = document.querySelector('#objetos-page .active');
-      const nextIndex = (index + 1) % slides.length;
-
-      currentSlide.classList.remove('active');
-      slides[nextIndex].classList.add('active');
-    });
-  });
-});
-</script>
 </body>
 </html>
