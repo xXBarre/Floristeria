@@ -135,6 +135,31 @@ h1{
   .section img:hover {
     transform: scale(1.1);
   }
+#objetos-page h1 {
+    text-align: center;
+    color: #0a6d39;
+  }
+  
+  #objetos-page .carousel-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  
+  #objetos-page .slide {
+    flex: 0 0 100%;
+    display: none;
+    text-align: center;
+  }
+  #objetos-page .slide img {
+    max-width: 25%;
+    height: auto;
+  }
+  #objetos-page .active {
+    display: block;
+  }
   
   /*Alba*/
   
