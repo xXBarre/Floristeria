@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
     <title>Pagina de Inicio </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 300px;
-            padding: 16px;
-            background-color: white;
-            margin: 0 auto;
-            margin-top: 100px;
-            border: 1px solid black;
-            border-radius: 4px;
-        }
-        .container input[type=text], .container input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        .container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        .container button:hover {
-            opacity: 0.8;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <form action="check_login.php" method="post">
-            <label for="uname"><b>Usuario</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+    <header class="header">
+        <nav class="nav">
+          <a href="inicio.html" class="logo nav-link">Flores Bloom</a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="registrarse.html" class="nav-menu-link nav-link">Login</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <br><br>
+      <main>
+        <div class="container">
+            <form action="check_login.php" method="post">
+                <label for="uname"><b>Usuario</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <label for="psw"><b>Contraseña</b></label>
-            <input type="password" placeholder="Contraseña" name="psw" required>
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Contraseña" name="psw" required>
 
-            <button type="submit" name="login">Login</button>
-        </form>
-    </div>
+                <button type="submit" name="login">Login</button>
+            </form>
+        </div>
+    </main>
 </body>

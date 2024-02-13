@@ -1,4 +1,4 @@
-
+/*Alba*/
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
     let currentIndex = 0;
