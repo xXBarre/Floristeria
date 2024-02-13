@@ -75,7 +75,6 @@ h1{
     cursor: pointer;
   }
   
-<<<<<<< HEAD
   .stores-section, .about-us-section {
     text-align: center;
     padding: 2em 0;
@@ -136,8 +135,6 @@ h1{
   .section img:hover {
     transform: scale(1.1);
   }
-=======
->>>>>>> ba03e09b1dd18ad0663c9d39d47f58765152f2a1
   
   /*Alba*/
   
