@@ -1,6 +1,8 @@
 /*Nico*/
+
 /*Boton top*/
 
+/*
 const sub = document.getElementById("top")
 sub.addEventListener('click', () => {
   window.scrollTo({
@@ -8,31 +10,123 @@ sub.addEventListener('click', () => {
     behavior: 'smooth'
   })
 })
+*/
 
 /*Cesta*/
 
 
+//funcion para almacenar los datos para poder usarlos
+function guardarAlmacenamientoLocal(llave, valor_a_guardar){
+  localStorage.setItem(llave, JSON.stringify(valor_a_guardar))
+}
+function obtenerAlmacenamientoLocal(llave){
+  const datos = JSON.parse(localStorage.getItem(llave))
+  return datos
+}
+let productos = obtenerAlmacenamientoLocal('productos') || [];
 
+//variables del html
+const informacionCompra = document.getElementById('informacionCompra');
+const contenedorCompra = document.getElementById('contenedorCompra');
+const productosCompra = document.getElementById('productosCompra');
+const contenedor = document.getElementById('contenedor');
+const carrito = document.getElementById('carrito');
+const numero = document.getElementById("numero");
+const header = document.querySelector("#header");
+const total = document.getElementById('total');
+const body = document.querySelector("body");
+const x = document.getElementById('x')
 
+let lista = []
+let valortotal = 0
 
-/*Alba*/
+window.addEventListener('load', () => {
+    visualizarProductos();
+    contenedorCompra.classList.add("none")
+})
 
-/*Laura*/
-document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll('.cont');
+function visualizarProductos() {
+  contenedor.innerHTML = ""
+  for (let i = 0; i < productos.length; i++) {
+    if (productos[i].existencia > 0) {
+      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><button onclick=comprar(${i})>Comprar</button></div></div>`
+    }
+      else {
+      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><p class="soldOut">Sold Out</p></div></div>`
+    }
+  }
+}
+/*
+function comprar(indice) {
+    lista.push({ nombre: productos[indice].nombre, precio: productos[indice].valor })
 
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', function() {
-      const currentSlide = document.querySelector('.active');
-      const nextIndex = (index + 1) % slides.length;
+    let van = true
+    let i = 0
+    while (van == true) {
+        if (productos[i].nombre == productos[indice].nombre) {
+            productos[i].existencia -= 1
+            if (productos[i].existencia == 0) {
+                visualizarProductos()
+            }
+            van = false
+        }
+        guardarAlmacenamientoLocal("productos", productos)
+        i += 1
+    }
+    numero.innerHTML = lista.length
+    numero.classList.add("diseñoNumero")
+    return lista
+}
 
-      currentSlide.classList.remove('active');
-      slides[nextIndex].classList.add('active');
-    });
-  });
-});
+carrito.addEventListener("click", function(){
+    body.style.overflow = "hidden"
+    contenedorCompra.classList.remove('none')
+    contenedorCompra.classList.add('contenedorCompra')
+    informacionCompra.classList.add('informacionCompra')
+    mostrarElemtrosLista()
+})
+
+function mostrarElemtrosLista() {
+    productosCompra.innerHTML = ""
+    valortotal = 0
+    for (let i = 0; i < lista.length; i++){
+        productosCompra.innerHTML += `<div><div class="img"><button onclick=eliminar(${i}) class="botonTrash"><img src="/img/trash.png"></button><p>${lista[i].nombre}</p></div><p> $${lista[i].precio}</p></div>`
+        valortotal += parseInt(lista[i].precio)
+    }
+    total.innerHTML = `<p>Valor Total</p> <p><span>$${valortotal}</span></p>`
+}
+
+function eliminar(indice){
+    let van = true
+    let i = 0
+    while (van == true) {
+        if (productos[i].nombre == lista[indice].nombre) {
+            productos[i].existencia += 1
+            lista.splice(indice, 1)
+            van = false
+        }
+        i += 1
+    }
+    guardarAlmacenamientoLocal("productos", productos)
+
+    numero.innerHTML = lista.length
+    if (lista.length == 0){
+        numero.classList.remove("diseñoNumero")
+    }
+    visualizarProductos()
+    mostrarElemtrosLista()
+}
+
+x.addEventListener("click", function(){
+    body.style.overflow = "auto"
+    contenedorCompra.classList.add('none')
+    contenedorCompra.classList.remove('contenedorCompra')
+    informacionCompra.classList.remove('informacionCompra')
+})
+*/
 
 /*Hugo*/
+/*
 window.onload = function(){
   let signUp = document.getElementById("signUp");
   let signIn = document.getElementById("signIn");
@@ -56,7 +150,8 @@ window.onload = function(){
         signIn.classList.add("disable");
         }
       }
-
+      */
+/*
 function validarFormulario() {
         // Obtener los valores del formulario
         var password = document.getElementById("password").value;
@@ -78,3 +173,4 @@ function validarFormulario() {
                 // Resto del código para enviar el formulario o realizar otras acciones
                 alert("Formulario válido. Puedes realizar la acción deseada.");
             }
+*/

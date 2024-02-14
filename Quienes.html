@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>Conocenos</title>
-</head>
-<body>
-  <header class="header" id="header">
-    <nav class="nav">
-      <a href="inicioA.html" class="logo nav-link">Bloom</a>
-      <ul class="nav-menu">
-        <li class="nav-menu-item">
-          <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
-        </li>
-        <li class="nav-menu-item">
-          <a href="Quienes.html" class="nav-menu-link nav-link">Quienes somos</a>
-        </li>
-        <li class="nav-menu-item">
-          <a href="inicio.html" class="nav-menu-link nav-link">Login</a>
-        </li>
-      </ul>
-      <img src="fotos/carro.png" alt="carrito" class="carrito">
-    </nav>
-  </header>
-    <br><br>
-    <main>
-        <h1>Hola</h1>
-    </main>
-    <footer>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <script src="index.js"></script>
+      <title>Conocenos</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav">
+        <a href="index.html" class="logo nav-link">Bloom</a>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="Quienes.html" class="nav-menu-link nav-link">Quienes somos</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="inicio.html" class="nav-menu-link nav-link">Login</a>
+          </li>
+        </ul>
+        <div id="carrito">
+          <img src="fotos/carro.png" alt="carrito" class="carrito">
+          <div id="numero"></div>
+        </div>
+      </nav>
+    </header>
+      <br><br>
+      <main>
+          <h1>Hola</h1>
+      </main>
+      <footer>
 
-    </footer>
-    
-</body>
+      </footer>
+      <div id="contenedorCompra">
+        <div class="informacionCompra" id="informacionCompra">
+            <h2>Cesta</h2>
+            <p class="x" id="x">x</p>
+        </div>
+  
+        <div class="productosCompra" id="productosCompra"></div>
+        <div class="total" id="total"></div>
+        <button>Comprar</button>
+      </div>      
+  </body>
 </html>

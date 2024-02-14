@@ -10,7 +10,7 @@
   <body>
     <header class="header" id="header">
       <nav class="nav">
-        <a href="inicioA.html" class="logo nav-link">Bloom</a>
+        <a href="index.html" class="logo nav-link">Bloom</a>
         <ul class="nav-menu">
           <li class="nav-menu-item">
             <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
@@ -22,9 +22,12 @@
             <a href="inicio.html" class="nav-menu-link nav-link">Login</a>
           </li>
         </ul>
-        <img src="fotos/carro.png" alt="carrito" class="carrito">
+        <div id="carrito">
+          <img src="fotos/carro.png" alt="carrito" class="carrito">
+          <div id="numero"></div>
+        </div>
       </nav>
-    </header>
+  </header>
     <main>
       <div class="container">
         <div class="section">
@@ -52,6 +55,19 @@
       <h4><center>En un rincón de sueños, la belleza asoma,
       <br>en Floristería Bloom, cada flor se corona.</center></h4>
     </main>
+    <footer>
+
+    </footer>
+    <div id="contenedorCompra">
+      <div class="informacionCompra" id="informacionCompra">
+          <h2>Cesta</h2>
+          <p class="x" id="x">x</p>
+      </div>
+
+      <div class="productosCompra" id="productosCompra"></div>
+      <div class="total" id="total"></div>
+      <button>Comprar</button>
+    </div>
   </body>
 </html>
 
