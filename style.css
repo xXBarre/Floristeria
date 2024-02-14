@@ -245,7 +245,7 @@ footer {
 }
   /* color de las letras */
 .footer a {
-      color: #8ada39;
+      color: #ffffff;
       text-decoration: none;
 }
   /* cuando vas a seleccionar el link cambia de color*/
@@ -324,7 +324,7 @@ footer {
   width: 30px;
   height: 4px;
   border-radius: 3px;
-  background: #048D7D;
+  background: #75a478;
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -356,7 +356,7 @@ input::placeholder {
 
 .input-field i {
   margin-left: 15px;
-  color: #048D7D;
+  color: #75a478;
 }
 
 form p {
@@ -366,7 +366,7 @@ form p {
 }
 
 form p a {
-  color: #048D7D;
+  color: #75a478;
   margin-left: 5px;
 }
 
@@ -379,7 +379,7 @@ form p a {
 .btn-field button {
   flex-basis: 48%;
   font-size: 16px;
-  background-color: #048D7D;
+  background-color: #75a478;
   color: #FFFFFF;
   height: 40px;
   border-radius: 10px;
