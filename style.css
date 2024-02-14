@@ -112,12 +112,12 @@ h1{
   height: 80%;
 }
 
-.objetos-page .slide {
+.objetos-page .cont {
   flex: 0 0 100%;
   display: none;
   text-align: center;
 }
-.objetos-page .slide img {
+.objetos-page .cont img {
   max-width: 25%;
   height: auto;
 }

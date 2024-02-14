@@ -1,3 +1,14 @@
+/*Nico*/
+/*Cesta*/
+
+document.addEventListener('click', function() {
+  let boton = document.getElementsByClassName("comprar")
+  console.log("Hola")
+  }
+)
+
+
+
 /*Alba*/
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
