@@ -32,11 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /*Hugo*/
-let signUp = document.getElementById("signUp");
-        let signIn = document.getElementById("signIn");
-        let nameInput = document.getElementById("nameInput");
-        let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-        let title = document.getElementById("title");
+window.onload = function(){
+  let signUp = document.getElementById("signUp");
+  let signIn = document.getElementById("signIn");
+  let nameInput = document.getElementById("nameInput");
+  let confirmPasswordInput = document.getElementById("confirmPasswordInput");
+  let title = document.getElementById("title");
 
         signIn.onclick = function() {
         nameInput.style.maxHeight = "0";
@@ -53,11 +54,12 @@ let signUp = document.getElementById("signUp");
         signUp.classList.remove("disable");
         signIn.classList.add("disable");
         }
+      }
 
-        function validarFormulario() {
-                // Obtener los valores del formulario
-                var password = document.getElementById("password").value;
-                var confirmPassword = document.getElementById("confirmPassword").value;
+      function validarFormulario() {
+        // Obtener los valores del formulario
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
                 // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
                 if (password !== confirmPassword) {
