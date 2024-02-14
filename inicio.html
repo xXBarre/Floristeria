@@ -5,85 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pagina de Registro y Login</title>
-    <link rel="stylesheet" href="estilo.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="form-content">
-            <h1 id="title"> Registro</h1>
-            <form>
-                <div class="input-group">
-                    <div class="input-field" id="nameInput">
-                        <i class="fa-solid fa-user"></i> 
-                        <input type="text" placeholder="Nombre">
-                    </div>
+    <header class="header">
+        <nav class="nav">
+            <a href="inicioA.html" class="logo nav-link">Bloom</a>
+            <ul class="nav-menu">
+              <li class="nav-menu-item">
+                <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link">Quienes somos</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="inicio.html" class="nav-menu-link nav-link">Login</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link nav-menu-link_active">Cesta</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-content">
+                <h1 id="title">Registro</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameInput">
+                            <i class="fa-solid fa-user"></i> 
+                            <input type="text" placeholder="Nombre">
+                        </div>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Correo">
-                    </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Correo">
+                        </div>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Contraseña">
-                    </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Contraseña">
+                        </div>
 
-                    <div class="input-field" id="confirmPasswordInput">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Confirmar Contraseña" id="confirmPassword">
+                        <div class="input-field" id="confirmPasswordInput">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Confirmar Contraseña" id="confirmPassword">
+                        </div>
+                        <p>Olvidade tu contraseña <a href="pagina 404.html"> Click aquí</a></p>
                     </div>
-                    <p>Olvidade tu contraseña <a href="pagina 404.html"> Click aquí</a></p>
-                </div>
-                <br>
-                <br>
-                <div class="btn-field">
-                    <button id="signUp" type="button"> Registro </button>
-                    <button id="signIn" type="button" > Login </button>
-                </div>
-            </form>
+                    <br>
+                    <br>
+                    <div class="btn-field">
+                        <button id="signUp" type="button"> Registro </button>
+                        <button id="signIn" type="button" > Login </button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <script>
-        let signUp = document.getElementById("signUp");
-        let signIn = document.getElementById("signIn");
-        let nameInput = document.getElementById("nameInput");
-        let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-        let title = document.getElementById("title");
-
-        signIn.onclick = function() {
-        nameInput.style.maxHeight = "0";
-        confirmPasswordInput.style.maxHeight = "0";
-        title.innerHTML = "Login";
-        signUp.classList.add("disable");
-        signIn.classList.remove("disable");
-        }
-
-        signUp.onclick = function() {
-        nameInput.style.maxHeight = "60px";
-        confirmPasswordInput.style.maxHeight = "60px";
-        title.innerHTML = "Registro";
-        signUp.classList.remove("disable");
-        signIn.classList.add("disable");
-        }
-
-        // Obtener los valores del formulario
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
-
-        // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
-        if (password !== confirmPassword) {
-        alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
-        return;
-        }
-
-        // Verificar si la contraseña contiene símbolos, números y letras
-        var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
-        if (!passwordPattern.test(password)) {
-        alert("La contraseña debe contener al menos una letra, un número y un símbolo");
-        return;
-        }
-    </script>
+    </main>
 </body>
 </html>
