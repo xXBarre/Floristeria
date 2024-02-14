@@ -170,6 +170,24 @@ h2 {
 }
 
 /*Nico*/
+/*Boton subir*/
+
+
+.gotop{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #75a478;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+
+/*Barra nav*/
 
 .nav {
   display: flex;
