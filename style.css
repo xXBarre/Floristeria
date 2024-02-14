@@ -261,19 +261,6 @@ footer {
 
 /*Login*/
 
-.conta body {
-  font-family: Arial, sans-serif;
-}
-
-.conta input[type=text], .conta input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
 .conta button {
   background-color: #75a478;
   color: white;
@@ -300,7 +287,7 @@ footer {
 .form-content {
   width: 100%;
   max-width: 450px;
-  background-color: #2c352e;
+  background-color: #2c3235;
   padding: 80px 60px 70px;
   text-align: center;
   border-radius: 25px;
