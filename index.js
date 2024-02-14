@@ -1,11 +1,7 @@
 /*Nico*/
 /*Cesta*/
 
-document.addEventListener('click', function() {
-  let boton = document.getElementsByClassName("comprar")
-  console.log("Hola")
-  }
-)
+
 
 
 
@@ -29,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*Laura*/
 document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll('.slide');
+  const slides = document.querySelectorAll('.cont');
 
   slides.forEach((slide, index) => {
     slide.addEventListener('click', function() {
@@ -67,7 +63,7 @@ window.onload = function(){
         }
       }
 
-      function validarFormulario() {
+function validarFormulario() {
         // Obtener los valores del formulario
         var password = document.getElementById("password").value;
         var confirmPassword = document.getElementById("confirmPassword").value;

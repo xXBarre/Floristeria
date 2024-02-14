@@ -99,7 +99,7 @@ h1{
     transform: scale(1.1);
   }
 
-.objetos-page h1 {
+.objetos{
   text-align: center;
   color: #0a6d39;
 }
@@ -112,12 +112,12 @@ h1{
   height: 80%;
 }
 
-.objetos-page .cont {
+.objetos-page .slide {
   flex: 0 0 100%;
   display: none;
   text-align: center;
 }
-.objetos-page .cont img {
+.objetos-page .slide img {
   max-width: 25%;
   height: auto;
 }
@@ -223,8 +223,73 @@ h2 {
   padding: 0 20px;
   line-height: 60px;
   cursor: pointer;
-
   display: none;
+}
+
+.carrito{
+  filter: invert(100%);
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+/*Plantas*/
+
+.contenedorF {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.contenedorF h2 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.contenedorF img {
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.contenedorF>div {
+  box-shadow: 0px 0px 5px 0px #000000;
+  background-color: #75a478;
+  border-radius: 20px;
+}
+
+.contenedorF>div:hover {
+  background-color: #466248;
+}
+  
+.informacion {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15;
+}
+
+.informacion .precio {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.informacion button {
+  background-color: #75a478;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 /*Hugo*/
@@ -262,7 +327,7 @@ footer {
 /*Login*/
 
 .conta button {
-  background-color: #75a478;
+  background-color: #466248;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -287,7 +352,7 @@ footer {
 .form-content {
   width: 100%;
   max-width: 450px;
-  background-color: #2c3235;
+  background-color: #75a478;
   padding: 80px 60px 70px;
   text-align: center;
   border-radius: 25px;
@@ -305,7 +370,7 @@ footer {
   width: 30px;
   height: 4px;
   border-radius: 3px;
-  background: #75a478;
+  background: #466248;
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -313,7 +378,7 @@ footer {
 }
 
 .input-field {
-  background-color: #515966;
+  background-color: #4d574e;
   margin: 15px 0;
   border-radius: 3px;
   display: flex;
@@ -347,7 +412,7 @@ form p {
 }
 
 form p a {
-  color: #75a478;
+  color: #354736;
   margin-left: 5px;
 }
 
@@ -360,7 +425,7 @@ form p a {
 .btn-field button {
   flex-basis: 48%;
   font-size: 16px;
-  background-color: #75a478;
+  background-color: #466248;
   color: #FFFFFF;
   height: 40px;
   border-radius: 10px;
