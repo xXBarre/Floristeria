@@ -178,3 +178,26 @@ function validarFormulario() {
                 alert("Formulario válido. Puedes realizar la acción deseada.");
             }
 */
+//Laura
+        function iniciarAnimacion() {
+            const numColumnas = 10;
+            const distanciaColumnas = window.innerWidth / numColumnas;
+            const columnas = Array.from({ length: numColumnas }, (_, i) => i);
+
+            setInterval(() => {
+                const columna = columnas.shift();
+                columnas.push(columna);
+
+                const flor = document.createElement('div');
+                flor.className = 'contenedor-flor';
+                flor.style.left = columna * distanciaColumnas + 'px';
+                flor.style.animationDuration = Math.random() * 2 + 1 + 's';
+                document.getElementById('lienzo').appendChild(flor);
+                
+                setTimeout(() => {
+                    flor.remove();
+                }, 3000);
+            }, 500);
+        }
+
+        window.onload = iniciarAnimacion;
