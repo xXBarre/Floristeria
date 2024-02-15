@@ -6,7 +6,7 @@
 <title>Flores - Bloom</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script defer src="index.js"></script>
 </head>
   <body>
     <header class="header" id="header">
@@ -30,15 +30,22 @@
           </li>
         </ul>
         <div id="carrito">
-          <img src="fotos/carro.png" alt="carrito" class="carrito">
-          <div id="numero"></div>
+          <img src="fotos/carro.png" alt="carrito" id="Fcarrito">
         </div>
-        </nav>
+      </nav>
     </header>
+
+    <div id="cesta">
+      <div id="productos"></div>
+      <button id="botonCarro">Vaciar Carrito</button>
+      <button id="botonCorro">Comprar</button>
+    </div>
+    
     <main>
       <br>
       <h1 class="objetos">Flores</h1>
       <br>
+
       <div class="contenedor" id="contenedor">
         <div>
           <img src="fotos/f1.png" alt="Monstera Deliciosa">
@@ -46,7 +53,7 @@
               <h2>Orquídea Bicolor <br></h2>
               <p class="precio">35,99€</p>
               <br>
-              <button>Compror</button>
+              <button class="bcomprar">Compror</button>
           </div>
         </div>
         <div>
@@ -55,7 +62,7 @@
               <h2>Ramo de 40 tulipanes<br></h2>
               <h4 class="precio">50,00€</h4>
               <br>
-              <button>Compror</button>
+              <button class="bcomprar">Compror</button>
           </div>
         </div>
         <div>
@@ -64,7 +71,7 @@
               <h2>Rosal + Mini Rosa<br></h2>
               <h4 class="precio">34,55€</h4>
               <br>
-              <button>Compror</button>
+              <button class="bcomprar">Compror</button>
           </div>
         </div>
         <div>
@@ -73,7 +80,7 @@
               <h2>Jardín Eterno<br></h2>
               <h4 class="precio">69,99€</h4>
               <br>
-              <button>Compror</button>
+              <button class="bcomprar">Compror</button>
           </div>
         </div>
         <div>
@@ -82,7 +89,7 @@
               <h2>Lirios Blancos y Rosados<br></h2>
               <h4 class="precio">34,55€</h4>
               <br>
-              <button>Compror</button>
+              <button class="bcomprar">Compror</button>
           </div>
         </div>
         <div>
@@ -91,24 +98,16 @@
             <h2>Anthurium Lila<br></h2>
             <h4 class="precio">29,99€</h4>
             <br>
-            <button>Compror</button>
+            <button class="bcomprar">Compror</button>
           </div>
         </div>
       </div>
+
       <button class="gotop" id="top">
         <i class="fas fa-chevron-up"></i>
       </button>
+      
     </main>
-    <div id="contenedorCompra">
-      <div class="informacionCompra" id="informacionCompra">
-          <h2>Cesta</h2>
-          <p class="x" id="x">x</p>
-      </div>
-
-      <div class="productosCompra" id="productosCompra"></div>
-      <div class="total" id="total"></div>
-      <button>Comprar</button>
-    </div>
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">

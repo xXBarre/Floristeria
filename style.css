@@ -10,6 +10,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: white;
 }
 
 header{
@@ -67,57 +68,6 @@ h1{
 }
 
 /*Laura*/
-
-#menu-desplegable-page {
-  margin:auto;
-  width:500px;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-#menu-desplegable-page ul,
-#menu-desplegable-page ol {
-  list-style:none;
-}
-
-#menu-desplegable-page > li {
-  float:left;
-}
-
-#menu-desplegable-page li a {
-  background-color:#75a478;
-  color:#fff;
-  text-decoration:none;
-  padding:10px 12px;
-  display:block;
-}
-
-#menu-desplegable-page li a:hover {
-  background-color:#466248;
-}
-
-#menu-desplegable-page li ul {
-  display:none;
-  position:absolute;
-  min-width:140px;
-}
-
-#menu-desplegable-page li:hover > ul {
-  display:block;
-}
-
-#menu-desplegable-page li ul li {
-  position:relative;
-}
-
-#menu-desplegable-page li ul li ul {
-  right:-140px;
-  top:0px;
-}
-
-.objetos{
-  color: #75a478;
-  text-align: center;
-}
 
 /*Alba*/
 .titulitosIndex{
@@ -208,142 +158,8 @@ h2 {
 
 /*Cesta*/
 
-.informacion button:active{
-  background-color: #466248;
-  color: white;
-}
-
-.diseñoNumero{
-  padding: 10px;
-  background-color: red;
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  font-size: 10px;
-  position: relative;
-  top: -12px;
-  left: 30px;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contenedorCompra{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0px;
-  background-color: rgb(51, 51, 51, 0.6);
-  flex-direction: column;
-  gap: 35px;
-}
-
-.contenedorCompra img{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.productosCompra img{
-  width: 25px;
-  height: auto;
-  margin: 10px;
-  border-bottom: none;
-  cursor: pointer;
-}
-
-.informacionCompra{
-  width: 500px;
-  height: 500px;
-  background-color: #75a478;
-  border-radius: 25px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: fixed;
-}
-
-.informacionCompra h2{
-  font-weight: 300;
-  margin: 50px 0px 0px 50px;
-  font-size: 32px;
-  width: 100%;
-}
-
-.x {
-  padding-top: 30px;
-  padding-right: 30px;
-  cursor: pointer;
-  font-size: 20px;
-  color: white;
-}
-
-.productosCompra{
-  font-size: 17px;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 450px;
-  height: 30%;
-  overflow-y: auto;
-  margin-top: 50px;
-}
-
-.productosCompra > div {
-  margin: 0px 45px;
-  padding: 20px 0px;
-  width: auto;
-  border-bottom: 1px dotted black;
-  display: flex;
-  justify-content: space-between;
-}
-
-.productosCompra::-webkit-scrollbar{
-  width: 7px;
-  background-color: #000000;
-  border-radius: 5px;
-}
-
-.productosCompra::-webkit-scrollbar-thumb{
-  background: white;
-  border-radius: 3px;
-}
-
-.total{
-  z-index: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 150px;
-  font-size: 27px;
-  font-weight: 700;
-}
-
-.total span{
-  font-weight: 300;
-}
-
-.contenedorCompra button{
-  z-index: 1;
-  background-color: #354736;
-  color: white;
-  width: 75px;
-  height: 30px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-}
-
-.contenedorCompra button:hover{
-  background-color: #75a478;
-  color: white;
+#cesta {
+  display: none;
 }
 
 /*Barra nav*/
@@ -403,7 +219,7 @@ h2 {
   display: none;
 }
 
-.carrito{
+#Fcarrito{
   filter: invert(100%);
   width: 75px;
   height: 75px;
@@ -414,8 +230,14 @@ h2 {
 
 /*Todos los productos*/
 
-.objetos h1{
+.objetos{
   color: #75a478;
+  text-align: center;
+}
+
+.informacion button:active{
+  background-color: #466248;
+  color: white;
 }
 
 .contenedor {
@@ -423,7 +245,6 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
-  margin-bottom: 20px;
 }
 
 .contenedor h2 {
