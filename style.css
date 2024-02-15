@@ -364,19 +364,14 @@ h2 {
 /*Hugo*/
 footer {
   background-color: #75a478;
-  color: #fff;
+  color: #000000;
+  padding: 40px 0;
   text-align: center;
-  padding: 1em;
   bottom: 0;
   width: 100%;
 }
 
 /* tamaño imagenes*/
-.footer {
-  background-color: #75a478;
-  color: #000000;
-  padding: 40px 0;
-}
 
 .footer-container {
   display: flex;
