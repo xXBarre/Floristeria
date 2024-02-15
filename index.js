@@ -201,3 +201,33 @@ window.onload = function iniciarAnimacion()
     }, 3000);
   }, 500);
 }
+
+/*Alba*/
+
+let curIndex = 0;
+
+function showLodedentro(index) {
+    const lodedentro = document.querySelector('.lodedentros');
+    const totalLodedentros = document.querySelectorAll('.lodedentro').length;
+
+    if (index >= totalLodedentros) {
+        curIndex = 0;
+    } else if (index < 0) {
+        curIndex = totalLodedentros - 1;
+    } else {
+        curIndex = index;
+    }
+
+    const translateValue = -curIndex * 100 + '%';
+    lodedentro.style.transform = `translateX(${translateValue})`;
+}
+
+function prevLodedentro() {
+    showLodedentro(curIndex - 1);
+}
+
+function nextLodedentro() {
+    showLodedentro(curIndex + 1);
+}
+
+setInterval(nextLodedentro, 3000);
