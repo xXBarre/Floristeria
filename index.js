@@ -47,10 +47,10 @@ function visualizarProductos() {
   contenedor.innerHTML = ""
   for (let i = 0; i < productos.length; i++) {
     if (productos[i].existencia > 0) {
-      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><button onclick=comprar(${i})>Comprar</button></div></div>`
+      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">${productos[i].valor}€</p><button onclick=comprar(${i})>Comprar</button></div></div>`
     }
       else {
-      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><p class="soldOut">Sold Out</p></div></div>`
+      contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">${productos[i].valor}€</p><p class="soldOut">Sold Out</p></div></div>`
     }
   }
 }
@@ -92,10 +92,10 @@ function mostrarElemtrosLista() {
     productosCompra.innerHTML = ""
     valortotal = 0
     for (let i = 0; i < lista.length; i++){
-        productosCompra.innerHTML += `<div><div class="img"><button onclick=eliminar(${i}) class="botonTrash"><img src="/img/trash.png"></button><p>${lista[i].nombre}</p></div><p> $${lista[i].precio}</p></div>`
+        productosCompra.innerHTML += `<div><div class="img"><button onclick=eliminar(${i}) class="botonTrash"><img src="/img/trash.png"></button><p>${lista[i].nombre}</p></div><p> ${lista[i].precio}€</p></div>`
         valortotal += parseInt(lista[i].precio)
     }
-    total.innerHTML = `<p>Valor Total</p> <p><span>$${valortotal}</span></p>`
+    total.innerHTML = `<p>Valor Total</p> <p><span>${valortotal}€</span></p>`
 }
 
 function eliminar(indice){
