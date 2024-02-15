@@ -2,7 +2,6 @@
 
 /*Boton top*/
 
-/*
 const sub = document.getElementById("top")
 sub.addEventListener('click', () => {
   window.scrollTo({
@@ -10,10 +9,9 @@ sub.addEventListener('click', () => {
     behavior: 'smooth'
   })
 })
-*/
+
 
 /*Cesta*/
-
 
 //funcion para almacenar los datos para poder usarlos
 function guardarAlmacenamientoLocal(llave, valor_a_guardar){
@@ -29,21 +27,21 @@ let productos = obtenerAlmacenamientoLocal('productos') || [];
 const informacionCompra = document.getElementById('informacionCompra');
 const contenedorCompra = document.getElementById('contenedorCompra');
 const productosCompra = document.getElementById('productosCompra');
-const contenedor = document.getElementById('contenedor');
 const carrito = document.getElementById('carrito');
 const numero = document.getElementById("numero");
-const header = document.querySelector("#header");
 const total = document.getElementById('total');
-const body = document.querySelector("body");
 const x = document.getElementById('x')
+const header = document.querySelector("#header");
+const contenedor = document.querySelector("#contenedor");
+const body = document.querySelector("body");
 
 let lista = []
 let valortotal = 0
 
-window.addEventListener('load', () => {
-    visualizarProductos();
-    contenedorCompra.classList.add("none")
-})
+window.onload = function (){
+  visualizarProductos();
+  contenedorCompra.classList.add("none")
+} 
 
 function visualizarProductos() {
   contenedor.innerHTML = ""
@@ -56,7 +54,7 @@ function visualizarProductos() {
     }
   }
 }
-/*
+
 function comprar(indice) {
     lista.push({ nombre: productos[indice].nombre, precio: productos[indice].valor })
 
@@ -123,10 +121,10 @@ x.addEventListener("click", function(){
     contenedorCompra.classList.remove('contenedorCompra')
     informacionCompra.classList.remove('informacionCompra')
 })
-*/
+
 
 /*Hugo*/
-/*
+
 window.onload = function(){
   let signUp = document.getElementById("signUp");
   let signIn = document.getElementById("signIn");
@@ -134,23 +132,25 @@ window.onload = function(){
   let confirmPasswordInput = document.getElementById("confirmPasswordInput");
   let title = document.getElementById("title");
 
-        signIn.onclick = function() {
-        nameInput.style.maxHeight = "0";
-        confirmPasswordInput.style.maxHeight = "0";
-        title.innerHTML = "Login";
-        signUp.classList.add("disable");
-        signIn.classList.remove("disable");
-        }
+  signIn.onclick = function() {
+  nameInput.style.maxHeight = "0";
+  confirmPasswordInput.style.maxHeight = "0";
+  title.innerHTML = "Login";
+  signUp.classList.add("disable");
+  signIn.classList.remove("disable");
+  }
 
-        signUp.onclick = function() {
-        nameInput.style.maxHeight = "60px";
-        confirmPasswordInput.style.maxHeight = "60px";
-        title.innerHTML = "Registro";
-        signUp.classList.remove("disable");
-        signIn.classList.add("disable");
-        }
-      }
-      */
+  signUp.onclick = function() {
+  nameInput.style.maxHeight = "60px";
+  confirmPasswordInput.style.maxHeight = "60px";
+  title.innerHTML = "Registro";
+  signUp.classList.remove("disable");
+  signIn.classList.add("disable");
+  }
+}
+
+  
+    
 /*
 function validarFormulario() {
         // Obtener los valores del formulario

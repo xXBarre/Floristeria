@@ -170,9 +170,9 @@ h2 {
 }
 
 /*Nico*/
+
 /*Boton subir*/
 
-/*
 .gotop{
   position: fixed;
   bottom: 40px;
@@ -185,7 +185,7 @@ h2 {
   border-radius: 25%;
   cursor: pointer;
 }
-*/
+
 
 /*Cesta*/
 
@@ -392,7 +392,11 @@ h2 {
   cursor: pointer;
 }
 
-/*Plantas*/
+/*Todos los productos*/
+
+.objetos h1{
+  color: #75a478;
+}
 
 .contenedor {
   display: flex;
