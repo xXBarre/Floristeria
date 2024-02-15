@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pagina de Registro y Login</title>
-    <script defer src="index.js"></script>
+
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -68,16 +68,6 @@
             </div>
         </div>
     </main>
-    <div id="contenedorCompra">
-      <div class="informacionCompra" id="informacionCompra">
-          <h2>Cesta</h2>
-          <p class="x" id="x">x</p>
-      </div>
-
-      <div class="productosCompra" id="productosCompra"></div>
-      <div class="total" id="total"></div>
-      <button>Comprar</button>
-    </div>
     <footer class="footer">
         <div class="footer-container">
           <div class="footer-section">
@@ -107,5 +97,28 @@
           </div>
         </div>
       </footer>
+      <script>
+        let signUp = document.getElementById("signUp");
+        let signIn = document.getElementById("signIn");
+        let nameInput = document.getElementById("nameInput");
+        let confirmPasswordInput = document.getElementById("confirmPasswordInput");
+        let title = document.getElementById("title");
+
+        signIn.onclick = function() {
+          nameInput.style.maxHeight = "0";
+          confirmPasswordInput.style.maxHeight = "0";
+          title.innerHTML = "Login";
+          signUp.classList.add("disable");
+          signIn.classList.remove("disable");
+        }
+
+        signUp.onclick = function() {
+          nameInput.style.maxHeight = "60px";
+          confirmPasswordInput.style.maxHeight = "60px";
+          title.innerHTML = "Registro";
+          signUp.classList.remove("disable");
+          signIn.classList.add("disable");
+        }
+      </script>
   </body>
 </html>
