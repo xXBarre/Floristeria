@@ -133,6 +133,10 @@ h1{
 }
 
 /*Alba*/
+.titulitosIndex{
+  font-size: 35px;
+  text-align: center;
+}
 
 .tiendas-section {
   display: flex;
