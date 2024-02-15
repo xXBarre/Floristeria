@@ -73,106 +73,82 @@ document.getElementById('botonCorro').addEventListener('click', comprar);
 
 /*Hugo*/
 
-// window.onload = function(){
-//   let signUp = document.getElementById("signUp");
-//   let signIn = document.getElementById("signIn");
-//   let nameInput = document.getElementById("nameInput");
-//   let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-//   let title = document.getElementById("title");
+window.onload = function(){
+  let signUp = document.getElementById("signUp");
+  let signIn = document.getElementById("signIn");
+  let nameInput = document.getElementById("nameInput");
+  let confirmPasswordInput = document.getElementById("confirmPasswordInput");
+  let title = document.getElementById("title");
 
-//   signIn.onclick = function() {
-//   nameInput.style.maxHeight = "0";
-//   confirmPasswordInput.style.maxHeight = "0";
-//   title.innerHTML = "Login";
-//   signUp.classList.add("disable");
-//   signIn.classList.remove("disable");
-//   }
+  signIn.onclick = function() {
+  nameInput.style.maxHeight = "0";
+  confirmPasswordInput.style.maxHeight = "0";
+  title.innerHTML = "Login";
+  signUp.classList.add("disable");
+  signIn.classList.remove("disable");
+  }
 
-//   signUp.onclick = function() {
-//   nameInput.style.maxHeight = "60px";
-//   confirmPasswordInput.style.maxHeight = "60px";
-//   title.innerHTML = "Registro";
-//   signUp.classList.remove("disable");
-//   signIn.classList.add("disable");
-//   }
-// }
+  signUp.onclick = function() {
+  nameInput.style.maxHeight = "60px";
+  confirmPasswordInput.style.maxHeight = "60px";
+  title.innerHTML = "Registro";
+  signUp.classList.remove("disable");
+  signIn.classList.add("disable");
+  }
+}
 
   
     
-// /*
-// function validarFormulario() {
-//         // Obtener los valores del formulario
-//         var password = document.getElementById("password").value;
-//         var confirmPassword = document.getElementById("confirmPassword").value;
+/*
+function validarFormulario() {
+        // Obtener los valores del formulario
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
-//                 // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
-//                 if (password !== confirmPassword) {
-//                     alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
-//                     return;
-//                 }
+                // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
+                if (password !== confirmPassword) {
+                    alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
+                    return;
+                }
 
-//                 // Verificar si la contraseña contiene símbolos, números y letras
-//                 var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
-//                 if (!passwordPattern.test(password)) {
-//                     alert("La contraseña debe contener al menos una letra, un número y un símbolo");
-//                     return;
-//                 }
+                // Verificar si la contraseña contiene símbolos, números y letras
+                var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
+                if (!passwordPattern.test(password)) {
+                    alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+                    return;
+                }
 
-//                 // Resto del código para enviar el formulario o realizar otras acciones
-//                 alert("Formulario válido. Puedes realizar la acción deseada.");
-//             }
-// */
+                // Resto del código para enviar el formulario o realizar otras acciones
+                alert("Formulario válido. Puedes realizar la acción deseada.");
+            }
+*/
 
-// //Laura
+/*Alba*/
 
-// window.onload = function iniciarAnimacion() 
-// {
-//   const numColumnas = 10;
-//   const distanciaColumnas = window.innerWidth / numColumnas;
-//   const columnas = Array.from({ length: numColumnas }, (_, i) => i);
+let curIndex = 0;
 
-//   setInterval(() => {
-//     const columna = columnas.shift();
-//     columnas.push(columna);
+function showLodedentro(index) {
+    const lodedentro = document.querySelector('.lodedentros');
+    const totalLodedentros = document.querySelectorAll('.lodedentro').length;
 
-//     const flor = document.createElement('div');
-//     flor.className = 'contenedor-flor';
-//     flor.style.left = columna * distanciaColumnas + 'px';
-//     flor.style.animationDuration = Math.random() * 2 + 1 + 's';
-//     document.getElementById('lienzo').appendChild(flor);
-                
-//     setTimeout(() => {
-//       flor.remove();
-//     }, 3000);
-//   }, 500);
-// }
+    if (index >= totalLodedentros) {
+        curIndex = 0;
+    } else if (index < 0) {
+        curIndex = totalLodedentros - 1;
+    } else {
+        curIndex = index;
+    }
 
-// /*Alba*/
+    const translateValue = -curIndex * 100 + '%';
+    lodedentro.style.transform = `translateX(${translateValue})`;
+}
 
-// let curIndex = 0;
+function prevLodedentro() {
+    showLodedentro(curIndex - 1);
+}
 
-// function showLodedentro(index) {
-//     const lodedentro = document.querySelector('.lodedentros');
-//     const totalLodedentros = document.querySelectorAll('.lodedentro').length;
+function nextLodedentro() {
+    showLodedentro(curIndex + 1);
+}
 
-//     if (index >= totalLodedentros) {
-//         curIndex = 0;
-//     } else if (index < 0) {
-//         curIndex = totalLodedentros - 1;
-//     } else {
-//         curIndex = index;
-//     }
-
-//     const translateValue = -curIndex * 100 + '%';
-//     lodedentro.style.transform = `translateX(${translateValue})`;
-// }
-
-// function prevLodedentro() {
-//     showLodedentro(curIndex - 1);
-// }
-
-// function nextLodedentro() {
-//     showLodedentro(curIndex + 1);
-// }
-
-// setInterval(nextLodedentro, 3000);
+setInterval(nextLodedentro, 3000);

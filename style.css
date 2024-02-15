@@ -67,60 +67,8 @@ h1{
   margin: 0;
 }
 
-/*Laura*/
 
-<<<<<<< HEAD
-=======
-.menu {
-  background-color: #3c763d; /* Color de fondo del menú */
-  color: #fff;
-  padding: 10px;
-}
 
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu ul li {
-  display: inline-block;
-  margin-right: 20px;
-  position: relative;
-}
-
-.menu ul li a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  transition: transform 0.2s; /* Efecto de transición */
-}
-
-.menu ul li a:hover {
-  background-color: #4cae4c; /* Color de fondo al pasar el ratón */
-  transform: scale(1.1); /* Aumento al pasar el ratón */
-}
-
-.menu ul li ul {
-  display: none;
-  position: absolute;
-  background-color: #4cae4c; /* Color de fondo del submenú */
-  padding: 10px;
-  top: 100%;
-  left: 0;
-  width: 120px;
-}
-
-.menu ul li:hover ul {
-  display: block;
-}
-.objetos{
-  color: #75a478;
-  text-align: center;
-}
-
->>>>>>> c0b6869465a5018dc5b2b925b178ff9c33475311
 /*Alba*/
 .titulitosIndex{
   font-size: 35px;
@@ -190,6 +138,50 @@ h2 {
   margin-bottom: 1em;
 }
 
+/*Laura*/
+
+#menu ul li{
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+#menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s;
+}
+
+#menu ul li a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: transform 0.2s; /* Efecto de transición */
+}
+
+#menu ul li a:hover {
+  color: #fff;
+  background-color: #466248; /* Color de fondo al pasar el ratón */
+  transform: scale(1.1); /* Aumento al pasar el ratón */
+}
+
+#menu ul li{
+  display: none;
+  position: absolute;
+  width: auto;
+  height: 15px;
+  background-color: #75a478; /* Color de fondo del submenú */
+}
+
+#menu:hover ul li {
+  background-color: #75a478;
+  color: #000000;
+  display: block;
+  padding: 10px;
+}
+
 /*Nico*/
 
 /*Boton subir*/
@@ -212,7 +204,7 @@ h2 {
 
 #cesta {
   display: none;
-}
+} 
 
 /*Barra nav*/
 
@@ -278,6 +270,12 @@ h2 {
   position: absolute;
   top: 14px;
   cursor: pointer;
+}
+
+
+.objetos{
+  color: #75a478;
+  text-align: center;
 }
 
 /*Todos los productos*/
