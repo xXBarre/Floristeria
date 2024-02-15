@@ -151,24 +151,45 @@ h1{
 }
 
 .inicio-carrusel {
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
+  text-align: center;
 }
 
-.fotitos {
+.lodedentro-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.lodedentros {
   display: flex;
-  width: 30%; /* 100% * número de slides */
   transition: transform 0.5s ease-in-out;
 }
 
 .lodedentro {
-  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
-img {
-  width: 100%;
+.lodedentro img {
+  width: 50%;
   height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 h2 {
