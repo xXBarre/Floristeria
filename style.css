@@ -107,7 +107,7 @@ h1{
         position: absolute;
         width: 40px;
         height: 40px;
-        background-image: url(pp.png); 
+        background-image: url(fotos/pp.png); 
         background-size: cover;
         pointer-events: none;
     }
