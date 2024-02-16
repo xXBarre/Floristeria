@@ -1,52 +1,63 @@
 /*Hugo*/
 
 window.onload = function(){
-  let signUp = document.getElementById("signUp");
-  let signIn = document.getElementById("signIn");
-  let nameInput = document.getElementById("nameInput");
-  let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-  let title = document.getElementById("title");
-
-  // PARA OBTENER LOS VALORES DEL FORMULARIO
-  let password = document.getElementById("Contraseña").innerHTML;
-  let confirmPassword = document.getElementById("ContraseñaConf").innerHTML;
-
-  let passwordIconPattern = /^(?=.[a-zA-Z])(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&*]+$/;
-
-  //Esto ejecuta la funcion para cambiar de login a registro y el typo de boton
-  signIn.onclick = function() {
-  nameInput.style.maxHeight = "0";
-  confirmPasswordInput.style.maxHeight = "0";
-  title.innerHTML = "Login";
-  signUp.classList.add("disable");
-  signIn.classList.remove("disable");
-  signUp.type.add("button");
-  signIn.type.remove("submit");
+    let signUp = document.getElementById("signUp");
+    let signIn = document.getElementById("signIn");
+    let nameInput = document.getElementById("nameInput");
+    let confirmPasswordInput = document.getElementById("confirmPasswordInput");
+    let title = document.getElementById("title");
+    let form = document.getElementById("form");
+  
+    signIn.onclick = function() {
+      nameInput.style.maxHeight = "0";
+      confirmPasswordInput.style.maxHeight = "0";
+      title.innerHTML = "Login";
+      signUp.classList.add("disable");
+      signIn.classList.remove("disable");
+    }
+  
+    signUp.onclick = function() {
+      nameInput.style.maxHeight = "60px";
+      confirmPasswordInput.style.maxHeight = "60px";
+      title.innerHTML = "Registro";
+      signUp.classList.remove("disable");
+      signIn.classList.add("disable");
+    }
+  
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      validarFormulario();
+    }
   }
-
-  signUp.onclick = function() {
-  nameInput.style.maxHeight = "60px";
-  confirmPasswordInput.style.maxHeight = "60px";
-  title.innerHTML = "Registro";
-  signUp.classList.remove("disable");
-  signIn.classList.add("disable");
-
-  // Verificar si la contraseña contiene símbolos, números y letras
-  if (password.test(passwordIconPattern)) {
-    alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+  
+  function validarFormulario() {
+    // Obtener los valores del formulario
+    var name = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+  
+    // Verificar si el nombre de usuario está vacío
+    if (name === "") {
+      alert("El nombre de usuario no puede estar vacío");
+      return;
+    }
+  
+    // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
+    if (password !== confirmPassword) {
+      alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
+      return;
+    }
+  
+    // Verificar si la contraseña contiene símbolos, números y letras
+    var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
+    if (!passwordPattern.test(password)) {
+      alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+      return;
+    }
+  
+    // Resto del código para enviar el formulario o realizar otras acciones
+    alert("Formulario válido. Puedes realizar la acción deseada.");
   }
-  // Verificar si la contraseña coincide con la confirmación de contraseña
-  else if (password !== confirmPassword) {
-    alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
-  }
-  else{
-    alert('Todo correcto maquina')
-  }
-  signUp.type.add("submit");
-  signIn.type.remove("button");
-  }
-}
-
 
 /*Alba*/
 
