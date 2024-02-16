@@ -179,6 +179,13 @@ function vaciarCarrito() {
     mostrarCarrito();
 }
 
+function verCarro() {
+    let cesta = document.getElementById('Cesta')
+    cesta.classList.remove("cesta");
+    cesta.classList.add("vercesta");
+}
+
+
 // Asociar eventos a los botones de compra
 document.querySelectorAll('.bcomprar').forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -188,6 +195,9 @@ document.querySelectorAll('.bcomprar').forEach((button, index) => {
         agregarAlCarrito(nombreProducto, precioNumerico);
     });
 });
+
+//Mostrar el carro 
+imgCarro.addEventListener('click', verCarro);
 
 // Asociar evento al botón de vaciar carrito
 document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);

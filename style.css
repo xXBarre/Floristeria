@@ -233,13 +233,59 @@ h2 {
 
 /*Cesta*/
 
-.cesta {
+.cesta, .cesta button{
   display: none;
+  height: 10px;
 }
 
-.vercesta{
+.vercesta {
   display: inline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
+
+.vercesta button{
+  background-color: #75a478;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  color: #FFFFFF;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.vercesta button:active{
+  background-color: #466248;
+  color: white;
+}
+
+#Cesta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+#Cesta>div {
+  background-color: #75a478;
+  border-radius: 20px;
+}
+
+  
+#productos{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15;
+}
+
 
 /*Barra nav*/
 
@@ -307,11 +353,6 @@ h2 {
   cursor: pointer;
 }
 
-
-.objetos{
-  color: #75a478;
-  text-align: center;
-}
 
 /*Todos los productos*/
 
