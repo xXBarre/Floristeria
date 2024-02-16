@@ -168,3 +168,44 @@ function ocultarInfo(elemento) {
   infoOverlay.style.opacity = '0';
   infoOverlay.style.transform = 'rotateY(180deg)';
 }
+//Laura
+
+    // Lista de chistes de plantas
+    var chistes = [
+        "¿Qué le dice una hoja de lechuga a otra? ¡Vámonos que nos están cortando el rollo!",
+        "¿Por qué las plantas no van al espacio? Porque necesitan un poco de tierra firme.",
+        "¿Qué le dice un árbol a otro? ¡Qué barra más chévere!",
+        "¿Cuál es la planta más divertida en el jardín? La risa-lis.",
+        "¿Qué le dice una planta al sol? ¡Acércate un poco, eres la luz de mi vida!",
+        "¿Cuál es el colmo de una planta carnívora? Ser vegetariana por necesidad.",
+        "¿Por qué las plantas de interior siempre están en casa? Porque no tienen raíces sociales.",
+        "¿Qué le dijo una planta a otra en una discusión? ¡No me pongas esa cara de ortiga!"
+    ];
+
+    // Función que muestra el chiste en el cuadro rosa
+    function mostrarChiste(chiste) {
+        var chisteBox = document.getElementById('chisteBox');
+        chisteBox.textContent = chiste;
+        chisteBox.style.display = 'block'; // Mostrar el cuadro de chistes
+        setTimeout(function() {
+            chisteBox.style.display = 'none'; // Ocultar el cuadro de chistes después de un tiempo
+        }, 5000); // Ocultar después de 5 segundos
+    }
+
+    // Cactus muestra un chiste
+    function moverCactus() {
+        var cactus = document.querySelector('.cactus');
+        cactus.style.animation = 'sway 5s ease-in-out';
+        setTimeout(function() {
+            cactus.style.animation = '';
+            // Selecciona un chiste aleatorio de la lista y lo muestra en el cuadro rosa
+            var chisteAleatorio = chistes[Math.floor(Math.random() * chistes.length)];
+            mostrarChiste(chisteAleatorio);
+        }, 500);
+    }
+
+    // Obtener el elemento del cactus por su clase y agregar un event listener
+    var cactus = document.querySelector('.cactus');
+    cactus.addEventListener('click', function() {
+        moverCactus();
+    });
