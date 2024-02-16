@@ -38,14 +38,14 @@
     </nav>
   </header>
     <main>
-    <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido">
+    <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
     <!-- Elemento para mostrar el chiste -->
     <div id="chisteBox">
     </div>
         <div class="conta">
             <div class="form-content">
                 <h1 id="title">Registro</h1>
-                <form onsubmit="return validarFormulario()">
+                <form>
                   <div class="input-group">
                       <div class="input-field" id="nameInput">
                           <i class="fa-solid fa-user"></i>
@@ -71,7 +71,7 @@
                   </div>
                   <br><br><br>
                   <div class="btn-field">
-                      <button id="signUp" type="submit"> Registro </button>
+                      <button id="signUp" type="submit" onclick="validarFormulario()"> Registro </button>
                       <button id="signIn" type="button"> Login </button>
                   </div>
               </form>
