@@ -168,6 +168,7 @@ function ocultarInfo(elemento) {
   infoOverlay.style.opacity = '0';
   infoOverlay.style.transform = 'rotateY(180deg)';
 }
+
 //Laura
 
     // Lista de chistes de plantas
