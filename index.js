@@ -144,4 +144,16 @@ document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);
 //Comprar
 document.getElementById('botonCorro').addEventListener('click', comprar);
 
+//Quienes somos
 
+function mostrarInfo(elemento) {
+  var infoOverlay = elemento.querySelector('.info-overlay');
+  infoOverlay.style.opacity = '1';
+  infoOverlay.style.transform = 'rotateY(0deg)';
+}
+
+function ocultarInfo(elemento) {
+  var infoOverlay = elemento.querySelector('.info-overlay');
+  infoOverlay.style.opacity = '0';
+  infoOverlay.style.transform = 'rotateY(180deg)';
+}
