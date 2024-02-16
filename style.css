@@ -140,6 +140,33 @@ h2 {
 
 /*Laura*/
 
+    .cactus {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes sway {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(20deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    #chisteBox {
+        display: none; /* Ocultar el cuadro de chistes inicialmente */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #ffcccc; /* Color de fondo rosa */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Asegura que esté en la parte superior */
+    }
+
 /*Para que no se vean los elementos del deplegable*/
 #menu ul li{
   display: none;
