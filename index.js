@@ -6,7 +6,6 @@ window.onload = function(){
     let nameInput = document.getElementById("nameInput");
     let confirmPasswordInput = document.getElementById("confirmPasswordInput");
     let title = document.getElementById("title");
-    let form = document.getElementById("form");
   
     signIn.onclick = function() {
       nameInput.style.maxHeight = "0";
