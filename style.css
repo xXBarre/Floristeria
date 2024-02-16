@@ -146,9 +146,14 @@ h2 {
   background-color: #75a478; /* Color de fondo del submenú */
 } 
 #menu ul {
+  display: none;
+  position: absolute;
+  /* top: 100%; */
+  /* left: 0; */
+  background-color: #75a478;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  z-index: 2;
 }
 
 #menu a {
@@ -160,7 +165,7 @@ h2 {
 
 #menu ul li a:hover {
   color: #fff;
-  background-color: #624646; /* Color de fondo al pasar el ratón */
+  background-color: #354736; /* Color de fondo al pasar el ratón */
   transform: scale(1.1); /* Aumento al pasar el ratón */
 }
 
@@ -169,11 +174,15 @@ h2 {
   text-decoration: none;
   display: block;
   transition: transform 0.2s; /* Efecto de transición */
-  background-color: #a47575;
+  background-color: #75a478;
 }
 
 #menu:hover ul li {
-  background-color: #a47575;
+  background-color: #75a478;
+  display: block;
+}
+
+#menu:hover ul {
   display: block;
 }
 

@@ -13,8 +13,15 @@
       <nav class="nav">
         <a href="index.html" class="logo nav-link">Bloom</a>
         <ul class="nav-menu">
-          <li class="nav-menu-item">
-            <a href="productos.html" class="nav-menu-link nav-link">Productos</a>
+          <li class="nav-menu-item" id="menu-desplegable-page">
+            <div class="nav-menu-item" id="menu">
+              <a href="#">Productos</a>
+              <ul>
+                  <li><a href="flores.html">Flores</a></li>
+                  <li><a href="Planta.html">Plantas</a></li>
+                  <li><a href="objetos.html">Objetos</a></li>
+              </ul>
+            </div>
           </li>
           <li class="nav-menu-item">
             <a href="Quienes.html" class="nav-menu-link nav-link">Quienes somos</a>
@@ -24,15 +31,15 @@
           </li>
         </ul>
         <div id="carrito">
-          <img src="fotos/carro.png" alt="carrito" class="carrito">
-          <div id="numero"></div>
+          <img src="fotos/carro.png" alt="carrito" id="Fcarrito">
         </div>
       </nav>
     </header>
       <br><br>
+    <main>
       <div class="video-container">
         <video loop="true" muted autoplay>
-          <source src="flores.mp4" type="video/mp4">
+          <source src="fotos/flores.mp4" type="video/mp4">
         </video>
       </div>
         <div class="contenido">
@@ -44,28 +51,28 @@
         <h2>Nuestro equipo</h2>
           <div class="equipo">
             <div class="miembro" onmouseover="mostrarInfo(this)" onmouseout="ocultarInfo(this)">
-                <img src="Nico.png" alt="Trabajador 1">
+                <img src="fotos/Nico.png" alt="Trabajador 1">
                 <div class="info-overlay">
                     <p>Nicolas Barrera</p>
                     <p>Agricultor</p>
                 </div>
             </div>
             <div class="miembro" onmouseover="mostrarInfo(this)" onmouseout="ocultarInfo(this)">
-                <img src="Laura.jpg" alt="Trabajador 2">
+                <img src="fotos/Laura.jpg" alt="Trabajador 2">
                 <div class="info-overlay">
                     <p>Laura Sanchez-Seco</p>
                     <p>Programadora</p>
                 </div>
             </div>
             <div class="miembro" onmouseover="mostrarInfo(this)" onmouseout="ocultarInfo(this)">
-                <img src="Hugo.png" alt="Trabajador 3">
+                <img src="fotos/Hugo.png" alt="Trabajador 3">
                 <div class="info-overlay">
                     <p>Hugo Herrero</p>
                     <p>Camionero</p>
                 </div>
             </div>
             <div class="miembro" onmouseover="mostrarInfo(this)" onmouseout="ocultarInfo(this)">
-                <img src="Alba.jpg" alt="Trabajador 4">
+                <img src="fotos/Alba.jpg" alt="Trabajador 4">
                 <div class="info-overlay">
                     <p>Alba Herrera</p>
                     <p>Florista</p>
@@ -73,16 +80,8 @@
             </div>
           </div>
       </div>
-      <div id="contenedorCompra">
-        <div class="informacionCompra" id="informacionCompra">
-            <h2>Cesta</h2>
-            <p class="x" id="x">x</p>
-        </div>
-  
-        <div class="productosCompra" id="productosCompra"></div>
-        <div class="total" id="total"></div>
-        <button>Comprar</button>
-      </div>
+      <br>
+    </main>
       <footer class="footer">
         <div class="footer-container">
           <div class="footer-section">
