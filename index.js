@@ -25,39 +25,46 @@ window.onload = function(){
     }
   
     form.onsubmit = function(e) {
-      e.preventDefault();
       validarFormulario();
     }
   }
   
   function validarFormulario() {
     // Obtener los valores del formulario
-    var name = document.getElementById("name").value;
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirmPassword").value;
-  
+    var name = document.getElementById("Nombre").value;
+    var email = document.getElementById("Correo").value;
+    var password = document.getElementById("Contraseña").value;
+    var confirmPassword = document.getElementById("ContraseñaConf").value;
+
     // Verificar si el nombre de usuario está vacío
     if (name === "") {
-      alert("El nombre de usuario no puede estar vacío");
-      return;
+        alert("El nombre de usuario no puede estar vacío");
+        return false;
     }
-  
-    // Verificar si la contraseña coincide con la confirmación de contraseña solo en la zona de registro
+
+    // Verificar si el correo electrónico es válido
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert("El correo electrónico no es válido");
+        return false;
+    }
+
+    // Verificar si la contraseña coincide con la confirmación de contraseña
     if (password !== confirmPassword) {
-      alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
-      return;
+        alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
+        return false;
     }
-  
+
     // Verificar si la contraseña contiene símbolos, números y letras
     var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
     if (!passwordPattern.test(password)) {
-      alert("La contraseña debe contener al menos una letra, un número y un símbolo");
-      return;
+        alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+        return false;
     }
-  
-    // Resto del código para enviar el formulario o realizar otras acciones
-    alert("Formulario válido. Puedes realizar la acción deseada.");
-  }
+
+    // Si todo está correcto, enviar el formulario
+    return true;
+}
 
 /*Alba*/
 
