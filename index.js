@@ -22,8 +22,8 @@ window.onload = function(){
       signUp.classList.remove("disable");
       signIn.classList.add("disable");
     }
-  }
-  
+}
+
   function validarFormulario() {
     // Obtener los valores del formulario
     var name = document.getElementById("Nombre").value;
@@ -63,7 +63,8 @@ window.onload = function(){
 
 
 
-//Laura
+/*Laura*/
+
     // Lista de chistes de plantas
     var chistes = [
         "¿Qué le dice una hoja de lechuga a otra? ¡Vámonos que nos están cortando el rollo!",
@@ -142,9 +143,11 @@ sub.addEventListener('click', () => {
 })
 
 /*Carrito*/
+
 // Array para almacenar los productos en el carrito
 let carrito = [];
 let imgCarro = document.getElementById('carrito')
+let cerrarCarro = document.getElementById('cerrar')
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombre, precio) {
@@ -166,11 +169,19 @@ function mostrarCarrito() {
     });
 }
 
+// Asociar eventos a los botones de compra de los objetos
+document.querySelectorAll('.bcomprar').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const nombreProducto = document.querySelectorAll('.informacion h2')[index].textContent.trim();
+        const precioProducto = document.querySelectorAll('.informacion .precio')[index].textContent.trim();
+        const precioNumerico = parseFloat(precioProducto.replace('€', '').replace(',', '.'));
+        agregarAlCarrito(nombreProducto, precioNumerico);
+    });
+});
+
 //Comprar
 function comprar() {
-    alert('Esta funcion aun no esta disponible por el momento, espera a que hagamos la practica de php.')
-    carrito = [];
-    location.reload();
+    alert('Esta funcion no esta disponible por el momento, espera a que empecemos con la practica de php.')
 }
 
 // Función para vaciar el carrito
@@ -185,19 +196,18 @@ function verCarro() {
     cesta.classList.add("vercesta");
 }
 
-
-// Asociar eventos a los botones de compra
-document.querySelectorAll('.bcomprar').forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const nombreProducto = document.querySelectorAll('.informacion h2')[index].textContent.trim();
-        const precioProducto = document.querySelectorAll('.informacion .precio')[index].textContent.trim();
-        const precioNumerico = parseFloat(precioProducto.replace('€', '').replace(',', '.'));
-        agregarAlCarrito(nombreProducto, precioNumerico);
-    });
-});
+function ocultarCarro() {
+    let cesta = document.getElementById('Cesta')
+    cesta.classList.remove("vercesta");
+    cesta.classList.add("cesta");
+}
 
 //Mostrar el carro 
 imgCarro.addEventListener('click', verCarro);
+
+//Cerrar el carro
+cerrarCarro.addEventListener('click', ocultarCarro);
+window.addEventListener('scroll', ocultarCarro);
 
 // Asociar evento al botón de vaciar carrito
 document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);

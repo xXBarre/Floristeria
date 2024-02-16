@@ -3,61 +3,15 @@
 <head>
     <title>404 Error</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-<style>
-    body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    width: 400px;
-    margin: 100px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: #466248;
-}
-
-p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #466248;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #f44336;
-}
-</style>
+    <script defer src="index.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="cuatro">
         <h1>404 Error</h1>
         <p>La página que estás buscando no fue encontrada.</p>
-        <button onclick="redirectToHome()">Regresar a la página de inicio</button>
+        <button><a href="index.html">Regresar a la página de inicio</a></button>
     </div>
-    <script>
-        function redirectToHome() {
-    alert("Error 404: La página que estás buscando no fue encontrada.");
-    window.location.href = "index.html";
-}
-    </script>
+    <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
+    <div id="chisteBox"></div>
 </body>
 </html>
