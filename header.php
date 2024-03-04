@@ -1,5 +1,5 @@
 <nav class="nav">
-    <a href="index.html" class="logo nav-link">Bloom</a>
+    <a href="index.php" class="logo nav-link">Bloom</a>
     <ul class="nav-menu">
         <li class="nav-menu-item">
            <div id="menu">
@@ -15,7 +15,7 @@
                   <a href="Quienes.php" class="nav-menu-link nav-link">Quienes somos</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="inicio.php" class="nav-menu-link nav-link">Login</a>
+                  <a href="login.php" class="nav-menu-link nav-link">Login</a>
                 </li>
               </ul>
               <div id="carrito">

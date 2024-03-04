@@ -54,21 +54,21 @@
                 <br><br>
                 <div class="relleno-images">
                     <div class="relleno-item">
-                        <a href="flores.html">
+                        <a href="flores.php">
                             <img src="fotos/f1.png" alt="Flores">
                         </a>
                         <br><br> 
                         <p>Flores</p>
                     </div>
                     <div class="relleno-item">
-                        <a href="plantas.html">
+                        <a href="plantas.php">
                             <img src="fotos/p2.png" alt="Plantas">
                         </a>
                         <br><br>
                         <p>Plantas</p>
                     </div>
                     <div class="relleno-item">
-                        <a href="objetos.html">
+                        <a href="objetos.php">
                             <img src="/fotos/o4.png" alt="Objetos">
                         </a>
                         <br><br>
