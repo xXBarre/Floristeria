@@ -1,6 +1,6 @@
 /*Hugo*/
 
-window.onload = function(){
+window.onload = function(){ //mirar lo del window.onload :(
     let signUp = document.getElementById("signUp");
     let signIn = document.getElementById("signIn");
     let nameInput = document.getElementById("nameInput");
@@ -13,7 +13,7 @@ window.onload = function(){
       title.innerHTML = "Login";
       signUp.classList.add("disable");
       signIn.classList.remove("disable");
-    }
+    } //cambiar login/regitrar
   
     signUp.onclick = function() {
       nameInput.style.maxHeight = "60px";
@@ -91,12 +91,12 @@ window.onload = function(){
     function moverCactus() {
         var cactus = document.querySelector('.cactus');
         cactus.style.animation = 'sway 5s ease-in-out';
-        setTimeout(function() {
+        setTimeout(function() { //addeventlistener (animationend)
             cactus.style.animation = '';
             // Selecciona un chiste aleatorio de la lista y lo muestra en el cuadro rosa
             var chisteAleatorio = chistes[Math.floor(Math.random() * chistes.length)];
             mostrarChiste(chisteAleatorio);
-        }, 500);
+        }, 5000);
     }
 
 
@@ -128,7 +128,7 @@ function nextLodedentro() {
     showLodedentro(curIndex + 1);
 }
 
-setInterval(nextLodedentro, 3000);
+setInterval(nextLodedentro, 3000); //que se interrumpa :) (timeout)
 
 /*Nico*/
 
@@ -142,7 +142,7 @@ sub.addEventListener('click', () => {
   })
 })
 
-/*Carrito*/
+/*Carrito*/ //guardar con galletas de js 
 
 // Array para almacenar los productos en el carrito
 let carrito = [];
@@ -217,7 +217,7 @@ document.getElementById('botonCorro').addEventListener('click', comprar);
 
 //Quienes somos
 
-function mostrarInfo(elemento) {
+function mostrarInfo(elemento) { //poner en clases
   var infoOverlay = elemento.querySelector('.info-overlay');
   infoOverlay.style.opacity = '1';
   infoOverlay.style.transform = 'rotateY(0deg)';
