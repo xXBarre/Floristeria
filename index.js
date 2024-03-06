@@ -1,68 +1,3 @@
-/*Hugo*/
-
-window.onload = function(){ //mirar lo del window.onload :(
-    let signUp = document.getElementById("signUp");
-    let signIn = document.getElementById("signIn");
-    let nameInput = document.getElementById("nameInput");
-    let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-    let title = document.getElementById("title");
-  
-    signIn.onclick = function() {
-      nameInput.style.maxHeight = "0";
-      confirmPasswordInput.style.maxHeight = "0";
-      title.innerHTML = "Login";
-      signUp.classList.add("disable");
-      signIn.classList.remove("disable");
-    } //cambiar login/regitrar
-  
-    signUp.onclick = function() {
-      nameInput.style.maxHeight = "60px";
-      confirmPasswordInput.style.maxHeight = "60px";
-      title.innerHTML = "Registro";
-      signUp.classList.remove("disable");
-      signIn.classList.add("disable");
-    }
-}
-
-  function validarFormulario() {
-    // Obtener los valores del formulario
-    var name = document.getElementById("Nombre").value;
-    var email = document.getElementById("Correo").value;
-    var password = document.getElementById("Contraseña").value;
-    var confirmPassword = document.getElementById("ContraseñaConf").value;
-
-    // Verificar si el nombre de usuario está vacío
-    if (name === "") {
-        alert("El nombre de usuario no puede estar vacío");
-        return false;
-    }
-
-    // Verificar si el correo electrónico es válido
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailPattern.test(email)) {
-        alert("El correo electrónico no es válido");
-        return false;
-    }
-
-    // Verificar si la contraseña coincide con la confirmación de contraseña
-    if (password !== confirmPassword) {
-        alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
-        return false;
-    }
-
-    // Verificar si la contraseña contiene símbolos, números y letras
-    var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
-    if (!passwordPattern.test(password)) {
-        alert("La contraseña debe contener al menos una letra, un número y un símbolo");
-        return false;
-    }
-
-    // Si todo está correcto, enviar el formulario
-    return true;
-}
-
-
-
 /*Laura*/
 
     // Lista de chistes de plantas
@@ -97,8 +32,137 @@ window.onload = function(){ //mirar lo del window.onload :(
             var chisteAleatorio = chistes[Math.floor(Math.random() * chistes.length)];
             mostrarChiste(chisteAleatorio);
         }, 5000);
-    }
+}
 
+/*Nico*/
+
+/*Boton top*/
+
+const sub = document.getElementById("top")
+sub.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+
+/*Carrito*/ //guardar con galletas de js 
+
+// Array para almacenar los productos en el carrito
+let carrito = [];
+let totalPrecio = 0;
+let imgCarro = document.getElementById('carrito')
+let cerrarCarro = document.getElementById('cerrar')
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(nombre, precio) {
+    let producto = { nombre, precio };
+    carrito.push(producto);
+    totalPrecio += precio; // Sumar el precio al total
+    actualizarCookie();
+    mostrarCarrito();
+    // Mostrar el precio total
+    const precioTotalContainer = document.getElementById('suma');
+    precioTotalContainer.textContent = `${totalPrecio} €`;
+}
+
+// Para actualizar la cookie
+
+function actualizarCookie() {
+    document.cookie = 'productos=' + JSON.stringify(carrito) + '; path=/;';
+    document.cookie = 'totalPrecio=' + totalPrecio + '; path=/';
+}
+
+// Para obtener la cookie
+let cookies = document.cookie.split(';');
+cookies.forEach(cookie => {
+    let [name, value] = cookie.split('=');
+    if (name.trim() === 'productos') {
+        carrito = JSON.parse(value);
+    }
+});
+
+
+// Función para mostrar los productos en el carrito
+function mostrarCarrito() {
+    const productosContainer = document.getElementById('productos');
+    productosContainer.innerHTML = '';
+
+    carrito.forEach(producto => {
+        const productoElement = document.createElement('div');
+        productoElement.classList.add('producto');
+        productoElement.innerHTML = `<span>${producto.nombre} - ${producto.precio} €</span>`;
+        productosContainer.appendChild(productoElement);
+    });
+
+    cookies.forEach(cookie => {
+        let [name, value] = cookie.split('=');
+        if (name.trim() === 'productos') {
+            carrito = JSON.parse(value);
+        }});
+
+}
+// Asociar eventos a los botones de compra de los objetos
+document.querySelectorAll('.bcomprar').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const nombreProducto = document.querySelectorAll('.informacion h2')[index].textContent.trim();
+        const precioProducto = document.querySelectorAll('.informacion .precio')[index].textContent.trim();
+        const precioNumerico = parseFloat(precioProducto.replace('€', '').replace(',', '.'));
+        agregarAlCarrito(nombreProducto, precioNumerico);
+    });
+});
+
+//Comprar
+function comprar() {
+    alert('Esta funcion no esta disponible por el momento, espera a que empecemos con la practica de php.')
+}
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    carrito = [];
+    cookies = [];
+    totalPrecio = 0;
+    document.getElementById('suma').textContent = '0€';
+    mostrarCarrito();
+}
+
+
+function verCarro() {
+    let cesta = document.getElementById('Cesta')
+    cesta.classList.remove("cesta");
+    cesta.classList.add("vercesta");
+}
+
+function ocultarCarro() {
+    let cesta = document.getElementById('Cesta')
+    cesta.classList.remove("vercesta");
+    cesta.classList.add("cesta");
+}
+
+//Mostrar el carro 
+imgCarro.addEventListener('click', verCarro);
+
+//Cerrar el carro
+cerrarCarro.addEventListener('click', ocultarCarro);
+window.addEventListener('scroll', ocultarCarro);
+
+// Asociar evento al botón de vaciar carrito
+document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);
+
+//Comprar
+document.getElementById('botonCorro').addEventListener('click', comprar);
+
+function mostrarInfo(elemento) { //poner en clases
+  var infoOverlay = elemento.querySelector('.info-overlay');
+  infoOverlay.style.opacity = '1';
+  infoOverlay.style.transform = 'rotateY(0deg)';
+}
+
+function ocultarInfo(elemento) {
+  var infoOverlay = elemento.querySelector('.info-overlay');
+  infoOverlay.style.opacity = '0';
+  infoOverlay.style.transform = 'rotateY(180deg)';
+}
 
 /*Alba*/
 
@@ -130,101 +194,33 @@ function nextLodedentro() {
 
 setInterval(nextLodedentro, 3000); //que se interrumpa :) (timeout)
 
-/*Nico*/
+/*Hugo*/
 
-/*Boton top*/
+function validarFormulario() {
+// Obtener los valores del formulario
+var name = document.getElementById("Nombre").value;
+var password = document.getElementById("Contraseña").value;
+var confirmPassword = document.getElementById("ContraseñaConf").value;
 
-const sub = document.getElementById("top")
-sub.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-})
-
-/*Carrito*/ //guardar con galletas de js 
-
-// Array para almacenar los productos en el carrito
-let carrito = [];
-let imgCarro = document.getElementById('carrito')
-let cerrarCarro = document.getElementById('cerrar')
-
-// Función para agregar un producto al carrito
-function agregarAlCarrito(nombre, precio) {
-    const producto = { nombre, precio };
-    carrito.push(producto);
-    mostrarCarrito();
+// Verificar si el nombre de usuario está vacío
+if (name === "") {
+    alert("El nombre de usuario no puede estar vacío");
+    return false;
 }
 
-// Función para mostrar los productos en el carrito
-function mostrarCarrito() {
-    const productosContainer = document.getElementById('productos');
-    productosContainer.innerHTML = '';
-
-    carrito.forEach(producto => {
-        const productoElement = document.createElement('div');
-        productoElement.classList.add('producto');
-        productoElement.innerHTML = `<span>${producto.nombre} - ${producto.precio} €</span>`;
-        productosContainer.appendChild(productoElement);
-    });
+// Verificar si la contraseña coincide con la confirmación de contraseña
+if (password !== confirmPassword) {
+    alert("La contraseña y la confirmación de contraseña no coinciden, por favor inténtelo de nuevo");
+    return false;
 }
 
-// Asociar eventos a los botones de compra de los objetos
-document.querySelectorAll('.bcomprar').forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const nombreProducto = document.querySelectorAll('.informacion h2')[index].textContent.trim();
-        const precioProducto = document.querySelectorAll('.informacion .precio')[index].textContent.trim();
-        const precioNumerico = parseFloat(precioProducto.replace('€', '').replace(',', '.'));
-        agregarAlCarrito(nombreProducto, precioNumerico);
-    });
-});
-
-//Comprar
-function comprar() {
-    alert('Esta funcion no esta disponible por el momento, espera a que empecemos con la practica de php.')
+// Verificar si la contraseña contiene símbolos, números y letras
+var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
+if (!passwordPattern.test(password)) {
+    alert("La contraseña debe contener al menos una letra, un número y un símbolo");
+    return false;
 }
 
-// Función para vaciar el carrito
-function vaciarCarrito() {
-    carrito = [];
-    mostrarCarrito();
-}
-
-function verCarro() {
-    let cesta = document.getElementById('Cesta')
-    cesta.classList.remove("cesta");
-    cesta.classList.add("vercesta");
-}
-
-function ocultarCarro() {
-    let cesta = document.getElementById('Cesta')
-    cesta.classList.remove("vercesta");
-    cesta.classList.add("cesta");
-}
-
-//Mostrar el carro 
-imgCarro.addEventListener('click', verCarro);
-
-//Cerrar el carro
-cerrarCarro.addEventListener('click', ocultarCarro);
-window.addEventListener('scroll', ocultarCarro);
-
-// Asociar evento al botón de vaciar carrito
-document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);
-
-//Comprar
-document.getElementById('botonCorro').addEventListener('click', comprar);
-
-//Quienes somos
-
-function mostrarInfo(elemento) { //poner en clases
-  var infoOverlay = elemento.querySelector('.info-overlay');
-  infoOverlay.style.opacity = '1';
-  infoOverlay.style.transform = 'rotateY(0deg)';
-}
-
-function ocultarInfo(elemento) {
-  var infoOverlay = elemento.querySelector('.info-overlay');
-  infoOverlay.style.opacity = '0';
-  infoOverlay.style.transform = 'rotateY(180deg)';
+// Si todo está correcto, enviar el formulario
+return true;
 }
