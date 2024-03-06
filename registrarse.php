@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pagina de Registro y Login</title>
+    <title> Pagina de Registro </title>
     <script defer src="index.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -13,16 +13,21 @@
 <body>
   <header class="header" id="header">
     <?php include_once("header.php"); ?>
- </header>
- <main>
+  </header>
+    <main>
     <!-- Elemento para mostrar el chiste -->
     <div id="chisteBox"></div>
         <div class="conta">
           <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
             <div class="form-content">
-                <h1 id="title">LOGIN</h1>
+                <h1 id="title">REGISTRARSE</h1>
                 <form onsubmit="return validarFormulario();">
-                  <div class="input-group">          
+                  <div class="input-group">
+                      <div class="input-field" id="nameInput">
+                          <i class="fa-solid fa-user"></i>
+                          <input type="text" placeholder="Nombre" id="Nombre">
+                      </div>
+              
                       <div class="input-field">
                           <i class="fa-solid fa-envelope"></i>
                           <input type="email" placeholder="Correo" id="Correo">
@@ -31,13 +36,19 @@
                       <div class="input-field">
                           <i class="fa-solid fa-lock"></i>
                           <input type="password" placeholder="Contraseña" id="Contraseña">
-                      </div>        
+                      </div>
+              
+                      <div class="input-field" id="confirmPasswordInput">
+                          <i class="fa-solid fa-lock"></i>
+                          <input type="password" placeholder="Confirmar Contraseña" id="ContraseñaConf">
+                      </div>
+              
                       <p>Olvidade tu contraseña <a href="pagina 404.html"> Click aquí</a></p>
                   </div>
                   <br><br><br>
                   <div class="btn-field">
-                      <button id="signUp" type="button"><a href="registrarse.html"></href> Registro </button>
-                      <button id="signIn" type="button"> Login </button>
+                      <button id="signUp" type="button"> Registro </button>
+                      <button id="signIn" type="button"><a href="login.html"></href> Login </button>
                   </div>
               </form>
             </div>
@@ -47,7 +58,7 @@
       </button>
     </main>
     <footer class="footer">
-      <?php include_once("footer.php"); ?>
+      <?php include_once("header.php"); ?>
     </footer>
   </body>
 </html>
