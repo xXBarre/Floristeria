@@ -1,4 +1,3 @@
-<?php include_once("conexion.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,43 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header class="header" id="header">
-    <?php include_once("header.php"); ?>
- </header>
- <main>
-    <!-- Elemento para mostrar el chiste -->
-    <div id="chisteBox"></div>
+    <header class="header" id="header">
+        <?php include_once("header.php"); ?>
+    </header>
+    <main>
         <div class="conta">
-          <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
+            <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
             <div class="form-content">
                 <h1 id="title">LOGIN</h1>
-                <form onsubmit="return validarFormulario();">
-                  <div class="input-group">          
-                      <div class="input-field">
-                          <i class="fa-solid fa-envelope"></i>
-                          <input type="email" placeholder="Correo" id="Correo">
-                      </div>
-              
-                      <div class="input-field">
-                          <i class="fa-solid fa-lock"></i>
-                          <input type="password" placeholder="Contraseña" id="Contraseña">
-                      </div>        
-                      <p>Olvidade tu contraseña <a href="pagina 404.html"> Click aquí</a></p>
-                  </div>
-                  <br><br><br>
-                  <div class="btn-field">
-                      <button id="signUp" type="button"><a href="registrarse.html"></href> Registro </button>
-                      <button id="signIn" type="button"> Login </button>
-                  </div>
-              </form>
-            </div>
+                <form onsubmit="return validarFormulario();" method="post" action="iniciarsesion.php">
+                    <div class="input-group">
+                    <div class="input-field">
+                        <label for="Correo"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="Correo" name="Correo" placeholder="Correo">
+                    </div>
+                    <div class="input-field">
+                        <label for="Contraseña"><i class="fa-solid fa-lock"></i> </label>
+                        <input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña">
+                    </div>
+                        <p>Olvidaste tu contraseña <a href="pagina404.html"> Click aquí</a></p>
+                    </div>
+                    <br><br><br>
+                    <div class="btn-field">
+                        <button id="signUp" type="button"><a href="register2.php">Registro</a></button>
+                        <button id="signIn" type="submit">Login</button>
+                    </div>
+                </form>
         </div>
-        <button class="gotop" id="top">
-          <i class="fas fa-chevron-up"></i>
-      </button>
     </main>
     <footer class="footer">
-      <?php include_once("footer.php"); ?>
+        <?php include_once("footer.php"); ?>
     </footer>
-  </body>
+</body>
 </html>
