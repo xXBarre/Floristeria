@@ -1,4 +1,3 @@
-<?php include_once("conexion.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,50 +15,40 @@
     <?php include_once("header.php"); ?>
   </header>
     <main>
-    <!-- Elemento para mostrar el chiste -->
-    <div id="chisteBox"></div>
         <div class="conta">
           <img class="cactus" src="fotos/cactus.png" alt="Cactus divertido" onclick="moverCactus()">
-            <div class="form-content">
-                <h1 id="title">REGISTRARSE</h1>
-                <form onsubmit="return validarFormulario();">
-                  <div class="input-group">
-                      <div class="input-field" id="nameInput">
-                          <i class="fa-solid fa-user"></i>
-                          <input type="text" placeholder="Nombre" id="Nombre">
-                      </div>
-              
-                      <div class="input-field">
-                          <i class="fa-solid fa-envelope"></i>
-                          <input type="email" placeholder="Correo" id="Correo">
-                      </div>
-              
-                      <div class="input-field">
-                          <i class="fa-solid fa-lock"></i>
-                          <input type="password" placeholder="Contraseña" id="Contraseña">
-                      </div>
-              
-                      <div class="input-field" id="confirmPasswordInput">
-                          <i class="fa-solid fa-lock"></i>
-                          <input type="password" placeholder="Confirmar Contraseña" id="ContraseñaConf">
-                      </div>
-              
-                      <p>Olvidade tu contraseña <a href="pagina 404.html"> Click aquí</a></p>
-                  </div>
-                  <br><br><br>
-                  <div class="btn-field">
-                      <button id="signUp" type="button"> Registro </button>
-                      <button id="signIn" type="button"><a href="login.html"></href> Login </button>
-                  </div>
-              </form>
-            </div>
-        </div>
-        <button class="gotop" id="top">
-          <i class="fas fa-chevron-up"></i>
-      </button>
+          <div class="form-content">
+            <h1 id="title">REGISTRARSE</h1>
+            <form onsubmit="return validarFormulario();" method="post" action="enviarregistro.php">
+                <div class="input-group">
+                    <div class="input-field" id="nameInput">
+                        <label for="name"><i class="fa-solid fa-user"></i></label>
+                        <input type="text" id="name" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="input-field">
+                        <label for="Correo"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="Correo" name="Correo" placeholder="Correo">
+                    </div>
+                    <div class="input-field">
+                        <label for="Contraseña"><i class="fa-solid fa-lock"></i> </label>
+                        <input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña">
+                    </div>
+                    <div class="input-field" id="confirmPasswordInput">
+                        <label for="ContraseñaConf"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="ContraseñaConf" name="ContraseñaConf" placeholder="Confirmar Contraseña">
+                    </div>
+                    <p>Olvidaste tu contraseña <a href="pagina 404.html">Click aquí</a></p>
+                </div>
+                <br><br><br>
+                <div class="btn-field">
+                    <button type="submit">Registro</button>
+                    <button id="signIn" type="button"><a href="login2.php">Login</a></button>
+                </div>
+            </form>
+    </div>
     </main>
     <footer class="footer">
-      <?php include_once("header.php"); ?>
+      <?php include_once("footer.php"); ?>
     </footer>
   </body>
 </html>
