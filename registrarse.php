@@ -42,7 +42,7 @@
                 <br><br><br>
                 <div class="btn-field">
                     <button type="submit">Registro</button>
-                    <button id="signIn" type="button"><a href="login2.php">Login</a></button>
+                    <button id="signIn" type="button"><a href="login.php">Login</a></button>
                 </div>
             </form>
     </div>

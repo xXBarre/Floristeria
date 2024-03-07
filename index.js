@@ -149,9 +149,6 @@ window.addEventListener('scroll', ocultarCarro);
 // Asociar evento al botón de vaciar carrito
 document.getElementById('botonCarro').addEventListener('click', vaciarCarrito);
 
-//Comprar
-document.getElementById('botonCorro').addEventListener('click', comprar);
-
 function mostrarInfo(elemento) { //poner en clases
   var infoOverlay = elemento.querySelector('.info-overlay');
   infoOverlay.style.opacity = '1';

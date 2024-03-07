@@ -22,7 +22,7 @@
           <img src="fotos/f1.png" alt="Monstera Deliciosa">
           <div class="informacion">
               <h2>Orquídea Bicolor <br></h2>
-              <p class="precio">35,99€</p>
+              <p class="precio">35€</p>
               <br>
               <button class="bcomprar">Comprar</button>
           </div>
@@ -31,7 +31,7 @@
           <img src="fotos/f2.png" alt="Pachira Aquatica">
           <div class="informacion">
               <h2>Ramo de 40 tulipanes<br></h2>
-              <h4 class="precio">50,00€</h4>
+              <h4 class="precio">50€</h4>
               <br>
               <button class="bcomprar">Comprar</button>
           </div>
@@ -40,7 +40,7 @@
           <img src="fotos/f3.png" alt="Kokedama Rosal Rojo">
           <div class="informacion">
               <h2>Rosal + Mini Rosa<br></h2>
-              <h4 class="precio">34,55€</h4>
+              <h4 class="precio">34€</h4>
               <br>
               <button class="bcomprar">Comprar</button>
           </div>
@@ -49,7 +49,7 @@
           <img src="fotos/f4.png" alt="Kokedama Rosal Rojo">
           <div class="informacion">
               <h2>Jardín Eterno<br></h2>
-              <h4 class="precio">69,99€</h4>
+              <h4 class="precio">69€</h4>
               <br>
               <button class="bcomprar">Comprar</button>
           </div>
@@ -58,7 +58,7 @@
           <img src="fotos/f5.png" alt="Kokedama Rosal Rojo">
           <div class="informacion">
               <h2>Lirios Blancos y Rosados<br></h2>
-              <h4 class="precio">34,55€</h4>
+              <h4 class="precio">34€</h4>
               <br>
               <button class="bcomprar">Comprar</button>
           </div>
@@ -67,7 +67,7 @@
           <img src="fotos/f6.png" alt="Kokedama Rosal Rojo">
           <div class="informacion">
             <h2>Anthurium Lila<br></h2>
-            <h4 class="precio">29,99€</h4>
+            <h4 class="precio">29€</h4>
             <br>
             <button class="bcomprar">Comprar</button>
           </div>

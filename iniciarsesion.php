@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit(); 
     } else {
         $response = array("status" => "error", "message" => "Credenciales incorrectas");
-        header('Location: login2.php');
+        header('Location: login.php');
         exit();  
     }
 } else {
