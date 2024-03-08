@@ -119,21 +119,18 @@ button[type="submit"]:hover {
             <img id="profile-image" src="default-profile.jpg" alt="Foto de perfil">
             <button id="change-image-button">Cambiar foto</button>
         </div>
-        <form id="contact-form">
+        <form id="contact-form" method="post">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
 
 
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user_email); ?>" required>
-
-            <button type="submit">Guardar</button>
-        </form>
-        </div>
         <br><br>
-        <form method="post">
         <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
         </form>
+        </div>
+        
 
         <script>
         document.getElementById('change-image-button').addEventListener('click', function() {
