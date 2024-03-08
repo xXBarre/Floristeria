@@ -8,10 +8,10 @@ $email = $_POST["Correo"];
 $password = $_POST["Contraseña"];
 
 // Realiza un hash de la contraseña utilizando el algoritmo por defecto (PASSWORD_DEFAULT)
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+//$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Construye la consulta SQL para insertar los datos en la tabla 'clientes'
-$sql = "INSERT INTO clientes (correo, nombre, contraseña) VALUES ('$email', '$name', '$hashedPassword')";
+$sql = "INSERT INTO clientes (correo, nombre, contraseña) VALUES ('$email', '$name', '$password')";
 
 // Ejecuta la consulta SQL y verifica si fue exitosa
 if ($conn->query($sql) === TRUE) {

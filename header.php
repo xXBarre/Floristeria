@@ -37,7 +37,9 @@ $textoEnlace = isset($_SESSION["user_email"]) ? 'Mi Perfil' : 'Login';
         <div id="productos"></div>
     </div>
     <br>
-    <h2>Total = <span id="suma"></span></h2>
-    <button id="botonCarro">Limpiar</button>
-    <button id="botonCorro">Comprar</button>
+    <form method="post" action="confirmar.php">
+      <h2>Total = <span name="total" id="suma">0€</span></h2>
+      <button id="botonCarro" type="button">Limpiar</button>
+      <button name="comprar" id="botonCorro" type="submit">Comprar</button>
+    </form>
 </div>
