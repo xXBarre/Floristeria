@@ -17,7 +17,7 @@ if (isset($_POST['confirmar'])) {
     foreach ($valorCookie as $producto) {
         $nombreProducto = $producto->nombre;
         $queryUpdateProducto = "UPDATE info_productos SET cantidad = cantidad - 1 WHERE nombre = '$nombreProducto'";
-        $result = mysqli_query($conn, $queryUpdateProducto);
+        mysqli_query($conn, $queryUpdateProducto);
     }
     
     // Limpiar el carrito después de realizar la compra
@@ -25,6 +25,11 @@ if (isset($_POST['confirmar'])) {
     setcookie('totalPrecio', '', time() - 3600, '/');
 
     header('Location: index.php');
+}
+else{
+    header("HTTP/1.1 403 Forbidden");
+    echo "Metodo de envio erroneo";
+    exit();  
 }
 ?>
 
